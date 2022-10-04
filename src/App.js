@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './components/Card/Card.js'
+import Hand from './components/Hand/Hand.js'
 
 class App extends React.Component {
 
@@ -52,29 +53,7 @@ render() {
       </div>
 
 
-      <section className="hand-section">
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-        <div className="hand">
-          <img className="card-img-top" src="" />
-        </div>
-      </section>
+      <Hand />
     </div>
 
 	)

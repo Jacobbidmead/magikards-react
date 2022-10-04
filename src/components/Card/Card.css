@@ -20,7 +20,7 @@
   background-image: url("https://assets.codepen.io/13471/sparkles.gif");
   border-radius: 10px;
   transform: scale(0.8) translateY(0px);
-	width: 70%;
+	
   transition: 1.5s;
   text-align: center;
 }
