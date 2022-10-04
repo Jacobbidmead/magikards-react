@@ -35,6 +35,7 @@ render() {
 // */}
           <Card archetype="fire"/>
         </div>
+				// props archetype change the css class of the card depending on wether they are ice or fire
 
         <Health />
       </div>
