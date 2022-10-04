@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './components/Card/Card.js'
 import Hand from './components/Hand/Hand.js'
+import Health from './components/Health/Health.js'
 
 class App extends React.Component {
 
@@ -22,14 +23,7 @@ render() {
         </div>
       </nav>
       <div className="layout">
-        <div>
-          <span>Player Name</span>
-          <div className="health-bar" data-total="1000" data-value="900">
-            <div className="bar">
-              <div className="hit"></div>
-            </div>
-          </div>
-        </div>
+      <Health />
 
         <div className="card-table">
 				<Card />
@@ -42,14 +36,7 @@ render() {
           <Card />
         </div>
 
-        <div>
-          <span>Player Name</span>
-          <div className="health-bar" data-total="1000" data-value="900">
-            <div className="bar">
-              <div className="hit"></div>
-            </div>
-          </div>
-        </div>
+        <Health />
       </div>
 
 
