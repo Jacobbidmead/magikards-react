@@ -6,14 +6,15 @@ class Card extends React.Component {
 
 
 
+
 	render() {
 		return(
-				<div className="card">
+				<div className={`card ${this.props.archetype}`}>
 					<div
-						className="card-img-top ice-img ice"
+						className="img"
 						style={{backgroundImage: "url('images/iceknight.png')"}}
 					></div>
-					<div className="card-body ice">
+					<div className={`card-body ${this.props.archetype}`}>
 						<h5 className="card-title text-center">Frost Warrior</h5>
 						<p className="card-text text-center">
 							<em>
@@ -23,13 +24,15 @@ class Card extends React.Component {
 						</p>
 						<p className="card-text text-center atributes">
 							Damage 80<span class="fist-icon"
-								><i className="fa-sharp fa-solid fa-hand-fist ice"></i
+								><i className={`fa-sharp fa-solid fa-hand-fist ${this.props.archetype}`}></i
 							></span>
 						</p>
 					</div>
 				</div>
 		)
+
 	}
+
 }
 
 export default Card

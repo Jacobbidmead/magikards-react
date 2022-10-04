@@ -26,14 +26,14 @@ render() {
       <Health />
 
         <div className="card-table">
-				<Card />
+				<Card archetype="ice"/>
 
 
 
 {/*
 	<Card backgroundImage={} title={} description={} />
 // */}
-          <Card />
+          <Card archetype="fire"/>
         </div>
 
         <Health />
