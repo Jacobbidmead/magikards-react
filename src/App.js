@@ -10,12 +10,10 @@ let cards = cardsData
 
 class App extends React.Component {
     state = {
-		hand: [cards[0], cards[0], cards[0], cards[12], cards[15]],
-		status: 'new'
+		hand: [cards[0], cards[0], cards[0], cards[11], cards[1], cards[8], cards[9]],
+		status: 'battle'
 	
 	}
-
-
 
   	render() {
 			return (
