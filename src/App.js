@@ -29,12 +29,19 @@ class App extends React.Component {
 		// } else if (playerTwo.playerArchetype === 'ice'){
 		// 	playerTwo.health = 700
 		// }
+
 		this.setState({
 			// player1: new Player(playerOne),
 			// player2: new Player(playerTwo),
 			status: 'battle'
 		})
+	
 		
+	}
+	returnToMenu = () => {
+		this.setState({
+			status: 'new'
+		})
 	}
   	render() {
 			return (
@@ -44,14 +51,13 @@ class App extends React.Component {
 				<nav className="layout">
 					<div>
 							<a href="#" className="button"> <img src="" />Username</a>
-							<a href="/" onClick={ e => this.initializePlayers()} className="button">Back</a>
 					</div>
 					<div>
 						<div className="title">MagiKards</div>
 					</div>
 
 					<div>
-							<a href="#" className="button">Quit Game</a>
+							<a href="#" className="button" onClick={ e => this.returnToMenu()}>Quit Game</a>
 					</div>
 				</nav>
 
