@@ -9,7 +9,7 @@ class Card extends React.Component {
 
 	render() {
 		return(
-			// this.props.archetype imports the style ice or fire into the html
+		
 				<div className={`card ${this.props.archetype}`}>
 					<div
 						className="img"
