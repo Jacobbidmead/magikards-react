@@ -14,24 +14,9 @@ class App extends React.Component {
 		status: 'new'
 	
 	}
-	initializePLayers(playerOne, playerTwo) {
-		// player1 and player2 above are objects that contain name and player archetype.
-		if (playerOne.playerArchetype == 'fire'){
-			playerOne.health = 500
-		} else if (playerOne.playerArchetype == 'ice'){
-			playerOne.health = 700
-		}
-		if (playerTwo.playerArchetype == 'fire'){
-			playerTwo.health = 500
-		} else if (playerTwo.playerArchetype == 'ice'){
-			playerTwo.health = 700
-		}
-		this.setState = {
-			player1: new Player({name: playerOne.name, playerArchetype: playerOne.playerArchetype, health: playerOne.health}),
-			player2: new Player({name: playerTwo.name, playerArchetype: playerTwo.playerArchetype, health: playerTwo.health})
-		}
-	}
-	
+
+
+
   	render() {
 			return (
 				<>
