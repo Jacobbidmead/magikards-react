@@ -183,7 +183,7 @@ let cardsData = [
   },
   {
     title: 'Frostbite',
-    image: 'images/iceshield.png',
+    image: 'images/sword.png',
     archetype: 'ice',
     description: 'An brisk cold damages',
     energy: 0,
@@ -197,12 +197,174 @@ let cardsData = [
           value: 1.35
         }
                 ]
-  }]
+  },
+	{
+	    title: 'Basic',
+	    image: '/images/sword.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 1,
+	    effects: [
+	        {
+	            type: 'damage',
+	            value: 30
+	        }
+	                ]
+	  },
+	{
+	    title: 'Cold Burn',
+	    image: '/images/iceknight.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 3,
+	    effects: [
+	        {
+	            type: 'damage',
+	            value: 160
+	        }
+	                ]
+	  },
+	{
+	    title: 'ICE Dragon',
+	    image: '/images/icedragon.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 3,
+	    effects: [
+	        {
+	            type: 'damage',
+	            value: 200
+	        }
+	                ]
+	  },
+	{
+	    title: 'Basic Defence',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 1,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.75
+	        }
+	                ]
+	  },
+	{
+	    title: 'Shield',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 2,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.65
+	        }
+	                ]
+	  },
+	{
+	    title: 'Evade',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 3,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.5
+	        }
+	                ]
+	  },
+	{
+	    title: 'Invisibility',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 3,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.3
+	        }
+	                ]
+	  },
+	{
+	    title: 'Basic boost',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 1,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.75
+	        },
+	        {
+	          type: 'boost',
+	          value: 1.25
+	        }
+	                ]
+	  },
+	{
+	    title: 'Frost boost',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 1,
+	    effects: [
+	        {
+	            type: 'defend',
+	            value: 0.65
+	        },
+	        {
+	          type: 'boost',
+	          value: 1.25
+	        }
+	                ]
+	  },
+	                 {
+	    title: 'Attack & defend',
+	    image: '/images/iceknight.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 3,
+	    effects: [
+	        {
+	            type: 'damage',
+	            value: 150
+	        },
+	        {
+	          type: 'defend',
+	          value: 0.85
+	        }
+	                ]
+	  },
+	                 {
+	    title: 'Attack & defend',
+	    image: '/images/iceshield.png',
+	    archetype: 'ice',
+	    description: '',
+	    energy: 2,
+	    effects: [
+	        {
+	            type: 'damage',
+	            value: 30
+	        },
+	        {
+	          type: 'defend',
+	          value: 0.75
+	        }
+	                ]
+	  }
+	]
+
 let burn = cardsData[0]
 let basic = cardsData[1]
 let explosion = cardsData[2]
 let dragon = cardsData[3]
-let firemage = cardsData[10]
+let firemage = cardsData[14]
+
 
 
 class App extends React.Component {
