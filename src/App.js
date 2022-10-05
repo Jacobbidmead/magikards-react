@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './components/Card/Card.js'
-import Hand from './components/Hand/Hand.js'
+import HandCard from './components/HandCard/HandCard.js'
 import Health from './components/Health/Health.js'
 
 class App extends React.Component {
@@ -31,7 +31,9 @@ class App extends React.Component {
 				<Health />
 				</div>
 
-				<Hand />
+			
+
+				<HandCard />
 				</div>
 
 			)
