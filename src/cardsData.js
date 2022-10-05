@@ -8,11 +8,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 50
+            value: 50,
+            textValue: '50'
         },
         {
           type: 'boost',
-          value: 1.35
+          value: 1.35,
+          textValue: '35%'
         }
                 ]
   },
@@ -25,7 +27,8 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 50
+            value: 50,
+            textValue: '50'
         },
 
                 ]
@@ -39,7 +42,8 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 100
+            value: 100,
+            textValue: '100'
         },
 
                 ]
@@ -52,7 +56,8 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 300
+            value: 300,
+            textValue: 300
         },
 
                 ]
@@ -65,7 +70,8 @@ export const cardsData = [
     effects: [
         {
             type: 'defend',
-            value: 0.85
+            value: 0.85,
+            textValue: '15%'
         },
 
                 ]
@@ -78,7 +84,8 @@ export const cardsData = [
     effects: [
         {
             type: 'defend',
-            value: 0.75
+            value: 0.75,
+            textValue: '25%'
         },
 
                 ]
@@ -91,7 +98,8 @@ export const cardsData = [
     effects: [
         {
             type: 'defend',
-            value: 0.65
+            value: 0.65,
+            textValue: '35%'
         },
 
                 ]
@@ -105,7 +113,8 @@ export const cardsData = [
     effects: [
         {
             type: 'defend',
-            value: 0.50
+            value: 0.50,
+            textValue: '50%'
         },
 
                 ]
@@ -118,11 +127,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 50
+            value: 50,
+            textValue: '50'
         },
         {
           type: 'boost',
-          value: 1.25
+          value: 1.25,
+          textValue: '25%'
         }
                 ]
   },
@@ -135,11 +146,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 50
+            value: 50,
+            textValue: '50'
         },
         {
           type: 'boost',
-          value: 1.35
+          value: 1.35,
+          textValue: '35%'
         }
                 ]
   },
@@ -152,11 +165,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 200
+            value: 200,
+            textValue: '100'
         },
         {
           type: 'boost',
-          value: 1.25
+          value: 1.25,
+          textValue: '25%'
         }
                 ]
   },
@@ -169,11 +184,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 250
+            value: 250,
+            textValue: '250'
         },
         {
           type: 'boost',
-          value: 1.25
+          value: 1.25,
+          textValue: '25%'
         }
                 ]
   },
@@ -186,11 +203,13 @@ export const cardsData = [
     effects: [
         {
             type: 'damage',
-            value: 80
+            value: 80,
+            textValue: '80'
         },
         {
           type: 'boost',
-          value: 1.35
+          value: 1.35,
+          textValue: '35%'
         }
                 ]
   },
@@ -203,7 +222,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'damage',
-	            value: 30
+	            value: 30,
+                textValue: '30'
 	        }
 	                ]
 	  },
@@ -216,7 +236,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'damage',
-	            value: 160
+	            value: 160,
+                textValue: '160'
 	        }
 	                ]
 	  },
@@ -229,7 +250,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'damage',
-	            value: 200
+	            value: 200,
+                textValue: '200'
 	        }
 	                ]
 	  },
@@ -242,7 +264,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.75
+	            value: 0.75,
+                textValue: '25%'
 	        }
 	                ]
 	  },
@@ -255,7 +278,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.65
+	            value: 0.65,
+                textValue: '35%'
 	        }
 	                ]
 	  },
@@ -268,7 +292,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.5
+	            value: 0.5,
+                textValue: '50%'
 	        }
 	                ]
 	  },
@@ -281,7 +306,8 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.3
+	            value: 0.3,
+                textValue: '70%'
 	        }
 	                ]
 	  },
@@ -294,11 +320,13 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.75
+	            value: 0.75,
+                textValue: '25%'
 	        },
 	        {
 	          type: 'boost',
-	          value: 1.25
+	          value: 1.25,
+              textValue: '25%'
 	        }
 	                ]
 	  },
@@ -311,11 +339,13 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'defend',
-	            value: 0.65
+	            value: 0.65,
+                textValue: '35%'
 	        },
 	        {
 	          type: 'boost',
-	          value: 1.25
+	          value: 1.25,
+              textValue: '25%'
 	        }
 	                ]
 	  },
@@ -328,11 +358,13 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'damage',
-	            value: 150
+	            value: 150,
+                textValue: '150'
 	        },
 	        {
 	          type: 'defend',
-	          value: 0.85
+	          value: 0.85,
+              textValue: '15%'
 	        }
 	                ]
 	  },
@@ -345,11 +377,13 @@ export const cardsData = [
 	    effects: [
 	        {
 	            type: 'damage',
-	            value: 30
+	            value: 30,
+                textValue: '30'
 	        },
 	        {
 	          type: 'defend',
-	          value: 0.75
+	          value: 0.75,
+              textValue: '25%'
 	        }
 	                ]
 	  }
