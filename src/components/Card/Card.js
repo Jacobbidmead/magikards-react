@@ -19,7 +19,7 @@ class Card extends React.Component {
 						<h3 className="card-title text-center">Frost Warrior</h3>
 
 						<h3 className="card-text text-center atributes">
-							80<span class="fist-icon"
+							80<span className="fist-icon"
 								><i className={`fa-sharp fa-solid fa-hand-fist ${this.props.archetype}`}></i
 							></span>
 						</h3>
