@@ -14,13 +14,13 @@ class App extends React.Component {
 						<div>
 								<a href="#" className="button"> <img src="" />Username</a>
 									</div>
-											<div>
+										<div>
 											<div className="title">MagiKards</div>
 												</div>
 												<div>
-												<a href="#" className="button">Quit Game</a>
-												</div>
-											</nav>
+											 <a href="#" className="button">Quit Game</a>
+											</div>
+										</nav>
 									<div className="layout">
 								<Health />
 							<div className="card-table">
@@ -28,10 +28,8 @@ class App extends React.Component {
 					<Card archetype="fire"/>
 				</div>
 
-
 				<Health />
 				</div>
-
 
 				<Hand />
 				</div>

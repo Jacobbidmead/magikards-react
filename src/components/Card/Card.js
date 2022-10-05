@@ -13,7 +13,7 @@ class Card extends React.Component {
 				<div className={`card ${this.props.archetype}`}>
 					<div
 						className="img"
-						style={{backgroundImage: "url('images/iceknight.png')"}}
+						style={{backgroundImage: "url('images/fireball.png')"}}
 					></div>
 					<div className={`card-body ${this.props.archetype}`}>
 						<h3 className="card-title text-center">Frost Warrior</h3>
