@@ -3,7 +3,9 @@ import React from 'react'
 class NewGame extends React.Component {
 	state = {
 		username:'Player One',
-		username2: 'Player Two'
+		username2: 'Player Two',
+		player1Archetype: '',
+		player2Archetype: ''
 
 	}
 	changeUsername = (e) => {
@@ -18,7 +20,20 @@ class NewGame extends React.Component {
 			username2: e.target.value
 		})
 	}
-	
+
+	changeArchetype = (player, type) => {
+		if (player == 'player1') {
+			this.setState({
+				player1Archetype: type
+			})
+		} else if (player == 'player2') {
+			this.setState({
+				player2Archetype: type
+			})
+		}
+	}
+
+
 	render () {
 		return (
 			<form>
@@ -29,23 +44,24 @@ class NewGame extends React.Component {
 			          <h2>{this.state.username2}</h2>
 			        </div>
 
-			        <div id="character-container">
+			        <div id="character-container" >
 			          <div>
 			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" />
 
 			          </div>
-			          <div id="character-box"></div>
-			          <div className="avatar"><img src="images/fireshield.png" /></div>
-			          <div className="avatar"><img src="images/iceshield.png" /></div>
+			          <div className="character-box"></div>
+			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player1', 'fire')}/></div>
+			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player1', 'ice')}/></div>
 			        </div>
 			        <div id="character-container">
 			          <div>
 			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
 
 			          </div>
-			          <div id="character-box"></div>
-			          <div className="avatar"><img src="images/fireshield.png" /></div>
-			          <div className="avatar"><img src="images/iceshield.png" /></div>
+			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' : 'url(images/icedragon.png)'}}></div>
+
+			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div>
+			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 			        </div>
 							<div>
 							<button onClick={e => this.props.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>Start</button>
