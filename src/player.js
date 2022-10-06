@@ -1,6 +1,7 @@
 import {cardsData} from './cardsData'
 class Player {
     constructor(obj){
+      // values that are commented out are for if we expand it into a multiplayer game
       this.name = obj.name
       //this.sessions = obj.sessions|| []  // lists all games they've played as well as all the xp gained, who won, date/time
       //this.messages = obj.messages || []  // Battle Requests or System Notifications (such as level up)
@@ -23,7 +24,7 @@ class Player {
       this.critBoost= obj.critBoost|| 1.5  // amount that is multiplied to the damage of a card (but before boosts are applied)
       this.critChance = obj.critChance|| 0  // percent chance that a critical occurs
       this.boosts = [] // only populated during battle to boost spell on top of your strength,
-      // boost is a raw number and is converted to a percentage (35 turns into 1.35, for example, to be multiplied to damage)
+      // boost is a float number and is converted to a percentage (1.35 is 35%, for example, to be multiplied to damage)
       //this.status = 'offline' // 3 different values only: offline, online, busy
       this.xpThreshold = [
         100,// Lvl 1
