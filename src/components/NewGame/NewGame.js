@@ -56,7 +56,7 @@ class NewGame extends React.Component {
 			        <div id="character-container">
 			          <div>
 			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
-
+ 
 			          </div>
 			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' : 
 					  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
