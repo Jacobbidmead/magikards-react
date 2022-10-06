@@ -28,12 +28,12 @@ class Battlefield extends React.Component {
 					</div>
 				</nav>
 			<div className="layout">
-					<Health />
+					<Health p1Health={this.state.player1.Health}/>
 					<div className="card-table">
 						<Card archetype="ice"/>
 						<Card archetype="fire"/>
 					</div>
-					<Health />
+					<Health p2Health={this.state.player2.Health}/>
 			</div>
 			<footer className="hand-section">
 				{this.state.hand.map(card => {
