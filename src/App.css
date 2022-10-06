@@ -96,6 +96,7 @@ input[type=text] {
 	align-items: right;
 	outline: white;
 	padding:10px;
+	width:50%;
 
 }
 
@@ -130,6 +131,16 @@ h2 {
   background-position: center;
   box-sizing: border-box;
 
+}
+
+.startButton {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	border-radius: 20px;
+	border-color: white;
+	float: right;
+	width: 200px;
 }
 
 
