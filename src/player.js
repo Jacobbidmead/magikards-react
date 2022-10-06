@@ -1,3 +1,4 @@
+import {cardsData} from './cardsData'
 class Player {
     constructor(obj){
       this.name = obj.name
@@ -36,6 +37,11 @@ class Player {
         5500,// 9
         7000// 10 (MAX) New spell(s) unlocked?
         ]
+    }
+    setDeck(){
+      // if player is fire, cards are all fire. if player is ice, cards should all be ice.
+      let cards = this.playerArchetype == 'fire' ? cardsData.filter(el => el.archetype === 'fire') : cardsData.filter(el => el.archetype === 'ice')
+      console.log(cards)
     }
     getRandomCards() {
       // 'Deck is the selection of cards available to a player at a certain level'
