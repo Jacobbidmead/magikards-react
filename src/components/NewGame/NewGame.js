@@ -1,19 +1,37 @@
 import React from 'react'
 
 class NewGame extends React.Component {
+	state = {
+		username:'Player One',
+		username2: 'Player Two'
+
+	}
+	changeUsername = (e) => {
+		this.setState({
+		 username: e.target.value,
+
+		})
+}
+
+	changeUsername2 = (e) => {
+		this.setState({
+			username2: e.target.value
+		})
+	}
+	
 	render () {
 		return (
 			<form>
 
 			      <div className="background playerLayout">
-			        <div><h2>Character Select</h2></div>
+			        <div><h2>{this.state.username}</h2></div>
 			        <div>
-			          <h2>Character Select</h2>
+			          <h2>{this.state.username2}</h2>
 			        </div>
 
 			        <div id="character-container">
 			          <div>
-			            <input type="text" placeholder="Username" />
+			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" />
 
 			          </div>
 			          <div id="character-box"></div>
@@ -22,15 +40,17 @@ class NewGame extends React.Component {
 			        </div>
 			        <div id="character-container">
 			          <div>
-			            <input type="text" placeholder="Username" />
+			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
 
 			          </div>
 			          <div id="character-box"></div>
 			          <div className="avatar"><img src="images/fireshield.png" /></div>
 			          <div className="avatar"><img src="images/iceshield.png" /></div>
 			        </div>
+							<div>
+							<button onClick={e => this.props.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>Start</button>
+							</div>
 			      </div>
-						<button onClick={e => this.props.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>click</button>
 			    </form>
 		)
 	}
