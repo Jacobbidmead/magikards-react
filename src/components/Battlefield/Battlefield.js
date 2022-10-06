@@ -10,6 +10,7 @@ class Battlefield extends React.Component {
 		player2: this.props.player2,
 		turn: 'player1', /*Player One goes first by default, this is changed once player selects a card*/
 	}
+	
 	render () {
 		return (
 			<>
@@ -37,7 +38,14 @@ class Battlefield extends React.Component {
 			<footer className="hand-section">
 				{this.state.turn === 'player1' && this.state.player1.setDeck()}
 				{this.state.turn === 'player1' && this.state.player1.getRandomCards()}
-					{this.state.player1.hand.map(card => {
+				{this.state.turn === 'player1' && this.state.player1.hand.map(card => {
+						return (
+							<HandCard card={card}/>
+						)
+					})}
+				{this.state.turn === 'player2' && this.state.player2.setDeck()}
+				{this.state.turn === 'player2' && this.state.player2.getRandomCards()}
+				{this.state.turn === 'player2' && this.state.player2.hand.map(card => {
 						return (
 							<HandCard card={card}/>
 						)
