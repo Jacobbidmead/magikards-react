@@ -9,7 +9,7 @@ class NewGame extends React.Component {
 
 	}
 	changeUsername = (e) => {
-		
+
 		this.setState({
 		 username: !e.target.value ? 'Player One': e.target.value
 		})
@@ -49,23 +49,24 @@ class NewGame extends React.Component {
 			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" />
 
 			          </div>
-			          <div className="character-box"></div>
+			          <div className="character-box" style={{ backgroundImage: this.state.player1Archetype == 'fire' ? 'url(images/firedragon.png)' :
+					  this.state.player1Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
 			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player1', 'fire')}/></div>
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player1', 'ice')}/></div>
 			        </div>
 			        <div id="character-container">
 			          <div>
 			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
- 
+
 			          </div>
-			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' : 
+			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' :
 					  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
 
 			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div>
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 			        </div>
 							<div>
-							<button onClick={e => this.props.initializePlayers({name: this.state.username, playerArchetype: this.state.player1Archetype}, 
+							<button onClick={e => this.props.initializePlayers({name: this.state.username, playerArchetype: this.state.player1Archetype},
 								{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button>
 							</div>
 			      </div>
