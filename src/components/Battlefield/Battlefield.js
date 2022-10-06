@@ -2,14 +2,13 @@ import React from 'react'
 import Card from '../Card/Card.js'
 import HandCard from '../HandCard/HandCard.js'
 import Health from '../Health/Health.js'
-import Player from '../../player'
-import NewGame from '../NewGame/NewGame.js'
 
 class Battlefield extends React.Component {
 	state = {
 		hand: this.props.hand,
 		player1: this.props.player1,
-		player2: this.props.player2
+		player2: this.props.player2,
+		turn: 'player1', /*Player One goes first by default, this is changed once player selects a card*/
 	}
 	render () {
 		return (
@@ -28,19 +27,27 @@ class Battlefield extends React.Component {
 					</div>
 				</nav>
 			<div className="layout">
-					<Health p1Health={this.state.player1.Health}/>
+					<Health player={this.state.player1}/>
 					<div className="card-table">
 						<Card archetype="ice"/>
 						<Card archetype="fire"/>
 					</div>
-					<Health p2Health={this.state.player2.Health}/>
+					<Health player={this.state.player2}/>
 			</div>
 			<footer className="hand-section">
-				{this.state.hand.map(card => {
+				{this.state.turn === 'player1' && this.state.player1.setDeck()}
+				{this.state.turn === 'player1' && this.state.player1.getRandomCards()}
+					{this.state.player1.hand.map(card => {
 						return (
 							<HandCard card={card}/>
 						)
 					})}
+				
+				{/* {this.state.hand.map(card => {
+						return (
+							<HandCard card={card}/>
+						)
+					})} */}
 			</footer>
 			</div>
 			</>
