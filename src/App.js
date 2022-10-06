@@ -40,7 +40,6 @@ class App extends React.Component {
 
 	}
 	returnToMenu = () => {
-		// this.state.player1.setDeck()
 		this.setState({
 			status: 'new',
 			player1: undefined,

@@ -64,7 +64,8 @@ class NewGame extends React.Component {
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 			        </div>
 							<div>
-							<button onClick={e => this.props.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>Start</button>
+							<button onClick={e => this.props.initializePlayers({name: this.state.username, playerArchetype: this.state.player1Archetype}, 
+								{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button>
 							</div>
 			      </div>
 			    </form>
