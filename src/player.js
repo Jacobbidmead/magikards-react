@@ -72,7 +72,12 @@ class Player {
             cardHand.push(randomCard)
             this.availableCards.splice(randomIndex, 1)
       }
-      this.hand = cardHand
+      if (this.hand.length === 0){
+        this.hand = cardHand
+      } else {
+        return null
+      }
+      
     }
     removeHealth(damagePoints) {
       // Removes health based off the incoming damage points.

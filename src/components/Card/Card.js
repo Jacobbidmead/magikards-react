@@ -20,7 +20,7 @@ class Card extends React.Component {
 
 						<h3 className="card-text text-center atributes">
 							{this.props.selectedCard.effects.map((effect, i)=> effect.textValue)}<span className="fist-icon"
-								><i className={`fa-sharp fa-solid fa-hand-fist ${this.props.selectedCard.archetype}`}></i
+								><i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i
 							></span>
 						</h3>
 					</div>
