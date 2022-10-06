@@ -24,7 +24,7 @@ class Battlefield extends React.Component {
 						</div>
 
 					<div>
-						<a href="#" className="button" onClick={ e => this.returnToMenu()}>Quit Game</a>
+						<a href="#" className="button" onClick={ e => this.props.return()}>Quit Game</a>
 					</div>
 				</nav>
 			<div className="layout">

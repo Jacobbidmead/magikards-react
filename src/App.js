@@ -53,7 +53,7 @@ class App extends React.Component {
 				<>
 				{/* Players will be populated from the inputs on the 'new game' page */}
 				{this.state.status === 'new' && <div><NewGame initializePlayers={this.initializePlayers}/></div>}
-				{this.state.status === 'battle' && <div><Battlefield player1={this.state.player1} player2={this.state.player2} hand={this.state.hand}/></div>}
+				{this.state.status === 'battle' && <div><Battlefield return={this.returnToMenu}player1={this.state.player1} player2={this.state.player2} hand={this.state.hand}/></div>}
 
 				</>)
 		}
