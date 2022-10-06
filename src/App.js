@@ -5,6 +5,7 @@ import Health from './components/Health/Health.js'
 import {cardsData} from './cardsData'
 import Player from './player'
 import NewGame from './components/NewGame/NewGame.js'
+import Battlefield from './components/Battlefield/Battlefield.js'
 
 let cards = cardsData
 
@@ -51,41 +52,9 @@ class App extends React.Component {
 			return (
 				<>
 				{/* Players will be populated from the inputs on the 'new game' page */}
-				{this.state.status === 'new' && <div><NewGame initializePlayers={this.initializePlayers}/>Hello World</div>}
-				{this.state.status === 'battle' &&
-				<div className="background">
-				<nav className="layout">
-					<div>
-							<a href='#' className="button"> <img src="" />Username</a>
-					</div>
-					<div>
-						<div className="title">MagiKards</div>
-					</div>
+				{this.state.status === 'new' && <div><NewGame initializePlayers={this.initializePlayers}/></div>}
+				{this.state.status === 'battle' && <div><Battlefield player1={this.state.player1} player2={this.state.player2} hand={this.state.hand}/></div>}
 
-					<div>
-							<a href="#" className="button" onClick={ e => this.returnToMenu()}>Quit Game</a>
-					</div>
-				</nav>
-
-
-				<div className="layout">
-						<Health />
-						<div className="card-table">
-							<Card archetype="ice"/>
-							<Card archetype="fire"/>
-						</div>
-						<Health />
-			  </div>
-
-				<footer className="hand-section">
-					{this.state.hand.map(card => {
-							return (
-								<HandCard card={card}/>
-							)
-						})}
-				</footer>
-			</div>
-		}
 				</>)
 		}
 
