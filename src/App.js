@@ -52,7 +52,7 @@ class App extends React.Component {
 			return (
 				<>
 				{/* Players will be populated from the inputs on the 'new game' page */}
-				{this.state.status === 'new' && <div><NewGame /><button onClick={e => this.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>click</button>Hello World</div>}
+				{this.state.status === 'new' && <div><NewGame initializePlayers={this.initializePlayers}/>Hello World</div>}
 				{this.state.status === 'battle' && <div className="background">
 				<nav className="layout">
 					<div>

@@ -4,6 +4,7 @@ class NewGame extends React.Component {
 	render () {
 		return (
 			<form>
+
 			      <div className="background playerLayout">
 			        <div><h2>Character Select</h2></div>
 			        <div>
@@ -29,6 +30,7 @@ class NewGame extends React.Component {
 			          <div className="avatar"><img src="images/iceshield.png" /></div>
 			        </div>
 			      </div>
+						<button onClick={e => this.props.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>click</button>
 			    </form>
 		)
 	}
