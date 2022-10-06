@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -83,11 +84,31 @@ nav {
   height: 25%;
   width: 25%;
   margin-left: 80px;
+
 }
 
+input[type=text] {
+	border-radius: 25px;
+  border-color: white;
+	background-color: black;
+	color: white;
+	margin-bottom: 70px;
+	align-items: right;
+	outline: white;
+	padding:10px;
+
+}
+
+input[type=text]:focus {
+  border: none;
+}
+
+
+
 #character-container img:hover {
-  border-color: rgb(75, 178, 159);
-  box-shadow: 0 0 5px blue;
+  border-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px black;
+
 }
 
 h2 {
@@ -100,14 +121,15 @@ h2 {
   width: 270px;
   height: 170px;
   float: left;
-  border-radius: 5px;
-  border: 1px solid black;
+  border-radius: 10px;
+  border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.644);
   background-image: url("https://assets.codepen.io/13471/sparkles.gif");
   background-size:  cover;
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
+
 }
 
 
