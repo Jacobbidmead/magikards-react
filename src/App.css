@@ -78,3 +78,40 @@ nav {
 .title {
   text-align: center;
 }
+
+.avatar img {
+  height: 25%;
+  width: 25%;
+  margin-left: 80px;
+}
+
+#character-container img:hover {
+  border-color: rgb(75, 178, 159);
+  box-shadow: 0 0 5px blue;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 3em;
+}
+
+#character-box {
+  width: 270px;
+  height: 170px;
+  float: left;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.644);
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.playerLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}

@@ -12,8 +12,8 @@ class NewGame extends React.Component {
 
 			        <div id="character-container">
 			          <div>
-			            <input type="text" name="" value="" />
-			            <a href="#" className="button"> <img src="" />Username</a>
+			            <input type="text" placeholder="Username" />
+
 			          </div>
 			          <div id="character-box"></div>
 			          <div className="avatar"><img src="images/fireshield.png" /></div>
@@ -21,8 +21,8 @@ class NewGame extends React.Component {
 			        </div>
 			        <div id="character-container">
 			          <div>
-			            <input type="text" name="" value="" />
-			            <a href="#" className="button"> <img src="" />Username</a>
+			            <input type="text" placeholder="Username" />
+
 			          </div>
 			          <div id="character-box"></div>
 			          <div className="avatar"><img src="images/fireshield.png" /></div>
