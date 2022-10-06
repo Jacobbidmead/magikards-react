@@ -58,7 +58,7 @@ class NewGame extends React.Component {
 			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
 
 			          </div>
-			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' : 'url(images/icedragon.png)'}}></div>
+			          <div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' : this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
 
 			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div>
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
