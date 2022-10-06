@@ -42,10 +42,10 @@ class Player {
       // if player is fire, cards are all fire. if player is ice, cards should all be ice.
       let cards = this.playerArchetype === 'fire' ? cardsData.filter(card => card.archetype === 'fire') : cardsData.filter(card => card.archetype === 'ice')
       // filter by energy (rank)
-      let rank_0 = {arr: cards.filter(card => card.energy === 0), max: 7}
-      let rank_1 = {arr: cards.filter(card => card.energy === 1), max: 7}
-      let rank_2 = {arr: cards.filter(card => card.energy === 2), max: 6}
-      let rank_3 = {arr: cards.filter(card => card.energy === 3), max: 4}
+      let rank_0 = {arr: cards.filter(card => card.energy === 0), max: 8}
+      let rank_1 = {arr: cards.filter(card => card.energy === 1), max: 8}
+      let rank_2 = {arr: cards.filter(card => card.energy === 2), max: 7}
+      let rank_3 = {arr: cards.filter(card => card.energy === 3), max: 5}
       // Players deck becomes: rank 0 max 6 cards, rank 1 max 6 cards, rank 2 max 5 cards, rank 3 max 4 cards, rank 4 max 3)
       // Select random cards from each rank obj's arr until they have the max
       cards = [rank_0, rank_1, rank_2, rank_3]
