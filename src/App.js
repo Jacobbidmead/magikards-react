@@ -41,20 +41,20 @@ class App extends React.Component {
 	returnToMenu = () => {
 		this.setState({
 			status: 'new',
-			player1: {},
-			player2: {}
+			player1: undefined,
+			player2: undefined
 		})
-		console.log(this.state.player1)
+		
 	}
   	render() {
 			return (
 				<>
 				{/* Players will be populated from the inputs on the 'new game' page */}
-				{this.state.status === 'new' && <div><button onClick={e => this.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>click</button>Hello World</div>}
+				{this.state.status === 'new' && <div><button onClick={e => this.initializePlayers({name: 'Josh', playerArchetype: 'fire'}, {name: 'Mohammed', playerArchetype: 'ice'})}>Submit</button>Hello World</div>}
 				{this.state.status === 'battle' && <div className="background">
 				<nav className="layout">
 					<div>
-							<a href="#" className="button"> <img src="" />Username</a>
+							<a href='#' className="button"> <img src="" />Username</a>
 					</div>
 					<div>
 						<div className="title">MagiKards</div>
