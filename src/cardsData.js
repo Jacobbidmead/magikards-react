@@ -38,7 +38,7 @@ export const cardsData = [
     image: '/images/sword.png',
     archetype: 'fire',
     description: 'An intense heat damages',
-    energy: 1,
+    energy: 2,
     effects: [
         {
             type: 'damage',
