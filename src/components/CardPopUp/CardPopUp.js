@@ -1,14 +1,14 @@
 import React from 'react'
-import Card from '/Card.js'
-import {cardsData} from '../cardsData'
+import Card from '../Card/Card.js'
+// import {cardsData} from '../cardsData'
 
-let cards = cardsData
+
+// let cards = cardsData
 
 
 class CardPopUp extends React.Component {
 	state = {
 		showAllCards: false
-
 	}
 
 	showCards = (e) => {
@@ -18,15 +18,19 @@ class CardPopUp extends React.Component {
 	}
 
 
+
+
+
 	render() {
 		return (
 <>
 
 {this.state.showAllCards ? <div><Card/></div> : null}
-	<div><button onlick={e => showCards(e)}>Show All Cards</button></div>
+	<div><button onClick={e => this.showCards(e)}>Show All Cards</button></div>
+
 </>
 		)
 	}
 }
 
-export CardPopUp
+export default CardPopUp

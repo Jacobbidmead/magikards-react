@@ -1,4 +1,5 @@
 import React from 'react'
+import CardPopUp from '../CardPopUp/CardPopUp.js'
 
 
 class NewGame extends React.Component {
@@ -75,6 +76,7 @@ class NewGame extends React.Component {
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 			        </div>
 								<div>
+
 
 {this.state.player1Archetype && this.state.player2Archetype ?
 								<button className="startButton" onClick={e => this.props.initializePlayers({name: this.state.username, playerArchetype: this.state.player1Archetype},
