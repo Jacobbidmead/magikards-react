@@ -18,7 +18,7 @@ class Battlefield extends React.Component {
 			image: 'https://assets.codepen.io/13471/sparkles.gif',
 			archetype: '',
 			description: '',
-			energy: 0,
+			energy: null,
 			effects: [
 				{
 					type: '',
@@ -32,7 +32,7 @@ class Battlefield extends React.Component {
 			image: 'https://assets.codepen.io/13471/sparkles.gif',
 			archetype: '',
 			description: '',
-			energy: 0,
+			energy: null,
 			effects: [
 				{
 					type: '',
