@@ -46,7 +46,7 @@ class NewGame extends React.Component {
 
 			        <div id="character-container" >
 			          <div>
-			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" />
+			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" maxLength={"20"} />
 
 			          </div>
 			          <div className="character-box" style={{ backgroundImage: this.state.player1Archetype == 'fire' ? 'url(images/firedragon.png)' :
@@ -59,7 +59,7 @@ class NewGame extends React.Component {
 
 
 								<div>
-			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
+			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)} maxLength={"20"}/>
 
 			          </div>
 
