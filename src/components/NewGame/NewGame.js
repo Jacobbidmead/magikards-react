@@ -61,7 +61,7 @@ class NewGame extends React.Component {
 
 							<div id="character-container">
 									<div>
-				            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
+				            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)} maxLength={"20"}/>
 				          </div>
 
 								 	<div>
@@ -76,7 +76,7 @@ class NewGame extends React.Component {
 
 								</div>
 						</div>
-						<div>
+						<div className="show-button">
 								<button className="startButton" style={{ visibility: this.state.player1Archetype && this.state.player2Archetype ? 'visible' : 'hidden' }}onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
 									{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button>
 						</div>

@@ -50,6 +50,7 @@ class Battlefield extends React.Component {
 			this.setState({
 				selectedCard2: card
 			})
+			
 		}
 	}
 	resetCards = () => {
