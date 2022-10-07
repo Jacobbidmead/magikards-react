@@ -23,6 +23,7 @@
   transform: scale(0.8) translateY(0px);
   transition: 1.5s;
   text-align: center;
+  height: 360px;
 }
 
 .hand {
