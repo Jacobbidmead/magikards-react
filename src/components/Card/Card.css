@@ -24,6 +24,8 @@
   transition: 1.5s;
   text-align: center;
   height: 360px;
+  width: 290px;
+  margin-left: 15%;
 }
 
 .hand {
