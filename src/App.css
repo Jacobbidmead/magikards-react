@@ -73,14 +73,10 @@ body {
 }
 
 .hand-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.button.quit {
-
-}
-
 
 .button {
   padding: 5px 10px;

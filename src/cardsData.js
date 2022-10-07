@@ -85,7 +85,7 @@ export const cardsData = [
         {
             type: 'defense',
             value: 0.75,
-            textValue: '-25% incoming'
+            textValue: '-25% incoming '
         },
 
                 ]

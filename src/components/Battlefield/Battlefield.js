@@ -99,7 +99,7 @@ class Battlefield extends React.Component {
 
 	render () {
 		return (
-			<>
+			
 			<div className="background">
 				
 				<nav className="layout">
@@ -147,7 +147,7 @@ class Battlefield extends React.Component {
 
 			</footer>
 			</div>
-			</>
+			
 		)
 	}
 }
