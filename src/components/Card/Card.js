@@ -19,9 +19,8 @@ class Card extends React.Component {
 						<h3 className="card-title text-center">{this.props.selectedCard.title}</h3>
 
 						<h3 className="card-text text-center atributes">
-							{this.props.selectedCard.effects.map((effect, i)=> effect.textValue)}<span className="fist-icon"
-								><i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i
-							></span>
+							{this.props.selectedCard.effects.map((effect, i)=> <div>{effect.textValue}<span className="fist-icon"
+								><i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i></span></div>)}
 						</h3>
 					</div>
 				</div>
