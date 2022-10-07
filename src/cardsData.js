@@ -14,7 +14,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35%'
         }
                 ]
   },
@@ -71,7 +71,7 @@ export const cardsData = [
         {
             type: 'defend',
             value: 0.85,
-            textValue: '15%'
+            textValue: '-15% incoming'
         },
 
                 ]
@@ -85,7 +85,7 @@ export const cardsData = [
         {
             type: 'defend',
             value: 0.75,
-            textValue: '25%'
+            textValue: '-25% incoming'
         },
 
                 ]
@@ -99,7 +99,7 @@ export const cardsData = [
         {
             type: 'defend',
             value: 0.65,
-            textValue: '35%'
+            textValue: '-35% incoming'
         },
 
                 ]
@@ -114,7 +114,7 @@ export const cardsData = [
         {
             type: 'defend',
             value: 0.50,
-            textValue: '50%'
+            textValue: '-50% incoming'
         },
 
                 ]
@@ -133,7 +133,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
@@ -152,7 +152,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35% outgoing'
         }
                 ]
   },
@@ -171,7 +171,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
@@ -190,7 +190,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
@@ -209,7 +209,7 @@ export const cardsData = [
         {
           type: 'boost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35% outgoing'
         }
                 ]
   },
@@ -256,7 +256,7 @@ export const cardsData = [
 	                ]
 	  },
 	{
-	    title: 'Basic Defence',
+	    title: 'Basic Defense',
 	    image: '/images/iceshield.png',
 	    archetype: 'ice',
 	    description: '',
@@ -265,7 +265,7 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.75,
-                textValue: '25%'
+                textValue: '-25% incoming'
 	        }
 	                ]
 	  },
@@ -279,7 +279,7 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.65,
-                textValue: '35%'
+                textValue: '-35% incoming'
 	        }
 	                ]
 	  },
@@ -293,7 +293,7 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.5,
-                textValue: '50%'
+                textValue: '-50% incoming'
 	        }
 	                ]
 	  },
@@ -307,7 +307,7 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.3,
-                textValue: '70%'
+                textValue: '-70% incoming'
 	        }
 	                ]
 	  },
@@ -321,12 +321,12 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.75,
-                textValue: '25%'
+                textValue: '-25% incoming'
 	        },
 	        {
 	          type: 'boost',
 	          value: 1.25,
-              textValue: '25%'
+              textValue: '+25% outgoing'
 	        }
 	                ]
 	  },
@@ -340,12 +340,12 @@ export const cardsData = [
 	        {
 	            type: 'defend',
 	            value: 0.65,
-                textValue: '35%'
+                textValue: '-35% incoming'
 	        },
 	        {
 	          type: 'boost',
 	          value: 1.25,
-              textValue: '25%'
+              textValue: '+25% outgoing'
 	        }
 	                ]
 	  },
@@ -364,7 +364,7 @@ export const cardsData = [
 	        {
 	          type: 'defend',
 	          value: 0.85,
-              textValue: '15%'
+              textValue: '-15% incoming'
 	        }
 	                ]
 	  },
@@ -383,7 +383,7 @@ export const cardsData = [
 	        {
 	          type: 'defend',
 	          value: 0.75,
-              textValue: '25%'
+              textValue: '-25% incoming'
 	        }
 	                ]
 	  }
