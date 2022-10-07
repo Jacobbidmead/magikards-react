@@ -12,8 +12,8 @@ class Health extends React.Component {
 			<div>
 				<span>{this.props.player.name}</span>
 				<div className="health-bar">
-					<div className="bar" style={{width:this.state.health}}>
-						<div className="hit"></div>
+					<div className="bar">
+						<div className="hit" style={{width:this.state.health}}></div>
 					</div>
 				</div>
 			</div>

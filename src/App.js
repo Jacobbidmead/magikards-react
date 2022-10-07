@@ -21,13 +21,17 @@ class App extends React.Component {
 	initializePlayers = (p1, p2) => {
 		// p1 and p2 above are objects that contain name and player archetype.
 		if (p1.playerArchetype === 'fire'){
+			p1.maxHealth = 500
 			p1.health = 500
 		} else if (p1.playerArchetype === 'ice'){
+			p1.maxHealth = 700
 			p1.health = 700
 		}
 		if (p2.playerArchetype === 'fire'){
+			p2.maxHealth = 500
 			p2.health = 500
 		} else if (p2.playerArchetype === 'ice'){
+			p2.maxHealth = 700
 			p2.health = 700
 		}
 
@@ -53,7 +57,7 @@ class App extends React.Component {
 				<>
 				{/* Players will be populated from the inputs on the 'new game' page */}
 				{this.state.status === 'new' && <div><NewGame initializePlayers={this.initializePlayers}/></div>}
-				{this.state.status === 'battle' && <div><Battlefield return={this.returnToMenu}player1={this.state.player1} player2={this.state.player2} hand={this.state.hand}/></div>}
+				{this.state.status === 'battle' && <div><Battlefield return={this.returnToMenu}player1={this.state.player1} player2={this.state.player2}/></div>}
 
 				</>)
 		}
