@@ -12,24 +12,16 @@ class NewGame extends React.Component {
 
 	}
 	changeUsername = (e) => {
-
 		this.setState({
 		 username: !e.target.value ? 'Player One': e.target.value.toLowerCase()
 		})
 }
-
 	changeUsername2 = (e) => {
 		this.setState({
 			username2: !e.target.value ? 'Player Two': e.target.value.toLowerCase()
 		})
 	}
-
-
-
-
 	changeArchetype = (player, type) => {
-
-
 		if (player == 'player1') {
 			this.setState({
 				player1Archetype: type
@@ -40,10 +32,6 @@ class NewGame extends React.Component {
 			})
 		}
 	}
-
-
-
-
 	render () {
 		return (
 

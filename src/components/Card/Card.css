@@ -7,6 +7,7 @@
   border-radius: 10px;
   padding: 10px;
   color: white;
+  height: 54%;
 }
 
 .card-table {
@@ -22,6 +23,9 @@
   transform: scale(0.8) translateY(0px);
   transition: 1.5s;
   text-align: center;
+  height: 360px;
+  width: 290px;
+  margin-left: 15%;
 }
 
 
