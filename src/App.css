@@ -16,8 +16,7 @@ body {
 
 
 .battleLog {
-
-	background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
 	color: white;
 	width: 75%;
 	padding:50px;
@@ -120,9 +119,6 @@ input[type=text] {
 
 }
 
-input[type=text]:focus {
-  border: none;
-}
 
 
 

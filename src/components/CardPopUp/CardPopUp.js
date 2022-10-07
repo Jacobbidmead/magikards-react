@@ -16,12 +16,7 @@ class CardPopUp extends React.Component {
 			showAllCards: this.state.showAllCards ? false : true
 		})
 	}
-
-
-
-
-
-	render() {
+    render() {
 		return (
 <>
 
