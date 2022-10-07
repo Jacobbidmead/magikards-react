@@ -34,7 +34,6 @@ body {
 
 .background {
   background-image: url('../public/images/background.png');
-  height: 100vh;
   background-size: cover;
 	text-align: center;
 }
@@ -99,10 +98,28 @@ nav {
   text-align: center;
 }
 
+
+.avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+	transition: 0.33s;
+}
+
+.avatar:hover {
+	cursor: pointer;
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: 0.15s;
+}
+
+
 .avatar img {
   height: 50px;
   width: 50px;
-	display: inline;
+
 
 }
 
@@ -129,7 +146,6 @@ h2 {
 .character-box {
   width: 270px;
   height: 170px;
-  float: left;
   border-radius: 10px;
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.644);
@@ -138,6 +154,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
+	margin: 0 auto;
 
 }
 
