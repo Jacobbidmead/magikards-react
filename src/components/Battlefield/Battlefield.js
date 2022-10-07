@@ -42,14 +42,17 @@ class Battlefield extends React.Component {
 						]
 		  },
 	}
-	submitCard = (player, card) =>{
+	submitCard = (player, card, idx) =>{
+		// idx is the index of the card that was selected so we can remove it from hand of player
 		console.log('submit card')
 		if (player == 'player1'){
+			this.state.player1.hand.splice(idx, 1)
 			this.setState({
 				selectedCard: card,
 				turn: 'player2'
 			})
 		} else if (player == 'player2'){
+			this.state.player2.hand.splice(idx, 1)
 			this.setState({
 				selectedCard2: card
 			})
@@ -101,7 +104,7 @@ class Battlefield extends React.Component {
 				
 				<nav className="layout">
 					<div>
-							<a href='#' className="button"> <img src="" />Username</a>
+							<a href='#' className="button">Username</a>
 					</div>
 					<div>
 						<div className="title">MagiKards</div>

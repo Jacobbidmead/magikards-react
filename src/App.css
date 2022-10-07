@@ -184,3 +184,7 @@ h2 {
 	top: 10px;
 	right: 10px	;
 }
+
+input {
+  text-align: center;
+}

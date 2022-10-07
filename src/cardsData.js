@@ -265,7 +265,7 @@ export const cardsData = [
 	        {
 	            type: 'defense',
 	            value: 0.75,
-                textValue: '-25% incoming'
+                textValue: '-25% incoming '
 	        }
 	                ]
 	  },
@@ -279,7 +279,7 @@ export const cardsData = [
 	        {
 	            type: 'defense',
 	            value: 0.65,
-                textValue: '-35% incoming'
+                textValue: '-35% incoming '
 	        }
 	                ]
 	  },
