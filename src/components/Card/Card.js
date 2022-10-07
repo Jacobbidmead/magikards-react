@@ -19,8 +19,10 @@ class Card extends React.Component {
 						<h3 className="card-title text-center">{this.props.selectedCard.title}</h3>
 
 						<h3 className="card-text text-center atributes">
-							{this.props.selectedCard.effects.map((effect, i)=> <div>{effect.textValue}<span className="fist-icon"
+							{this.props.selectedCard.effects.length == 1 ? <><div>{this.props.selectedCard.effects[0].textValue}<span className="fist-icon"
+								><i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i></span></div><div style={{height: "100%"}}></div></>: this.props.selectedCard.effects.map((effect, i)=> <div>{effect.textValue}<span className="fist-icon"
 								><i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i></span></div>)}
+							
 						</h3>
 					</div>
 				</div>
