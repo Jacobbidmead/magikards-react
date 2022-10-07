@@ -4,7 +4,7 @@ import React from 'react'
 class HandCard extends React.Component {
 	render() {
 		return (
-			<div className="hand" onClick={e => this.props.submitCard(this.props.player, this.props.card)}>
+			<div className="hand" onDoubleClick={e => this.props.submitCard(this.props.player, this.props.card)}>
           <div>
             <img className="hand-img" src={this.props.card.image} />
           </div>
