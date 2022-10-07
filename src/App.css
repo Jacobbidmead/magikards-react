@@ -100,9 +100,9 @@ nav {
 }
 
 .avatar img {
-  height: 25%;
-  width: 25%;
-  margin-left: 80px;
+  height: 50px;
+  width: 50px;
+	display: inline;
 
 }
 
@@ -119,14 +119,6 @@ input[type=text] {
 
 }
 
-
-
-
-#character-container img:hover {
-  border-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 5px black;
-
-}
 
 h2 {
   color: rgb(255, 255, 255);
