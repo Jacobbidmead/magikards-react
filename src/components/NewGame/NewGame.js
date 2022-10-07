@@ -34,14 +34,17 @@ class NewGame extends React.Component {
 	}
 	render () {
 		return (
-
-<>
+					<>
 			      <div className="background">
-						<div className="playerLayout">
+							<div className="playerLayout">
 
-			        <div><h2>{this.state.username}</h2></div>
+			        <div>
+								<h2>{this.state.username}</h2>
+							</div>
+
 			        <div>
 			          <h2>{this.state.username2}</h2>
+								<div className="popUpCard"><CardPopUp /></div>
 			        </div>
 
 			        <div id="character-container" >
@@ -49,6 +52,7 @@ class NewGame extends React.Component {
 			            <input  onKeyUp={e => this.changeUsername(e)} type="text" placeholder="Username" maxLength={"20"} />
 
 			          </div>
+
 			          <div className="character-box" style={{ backgroundImage: this.state.player1Archetype == 'fire' ? 'url(images/firedragon.png)' :
 					  this.state.player1Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
 				          <div className="avatar"><img src="images/fire.png" onClick={() => this.changeArchetype('player1', 'fire')} /></div>
@@ -56,7 +60,14 @@ class NewGame extends React.Component {
 			        </div>
 
 							<div id="character-container">
+									<div>
+				            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)}/>
+				          </div>
 
+								 	<div>
+										<div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' :
+							  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
+									<div className="avatar"><img src="images/fire.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div>
 
 								<div>
 			            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)} maxLength={"20"}/>
@@ -65,33 +76,15 @@ class NewGame extends React.Component {
 
 
 
-								<div className="character-box" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' :
-					  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
-
-			          <div><div className="avatar"><img src="images/fire.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div></div>
-
-
-								<div className="avatar"><img src="images/ice.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
-              </div>
-
-
-
-
-
-
-							<div>
+						</div>
+						<div>
 							{this.state.player1Archetype && this.state.player2Archetype ?
 								<button className="startButton" onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
 									{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button> : null}
+						</div>
 
-									<div className="popUpCard"><CardPopUp /></div>
-									</div>
-
-</div>
-
-
-			      </div>
-</>
+					</div>
+				</>
 		)
 	}
 }
