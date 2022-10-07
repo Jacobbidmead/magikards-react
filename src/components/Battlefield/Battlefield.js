@@ -23,7 +23,26 @@ class Battlefield extends React.Component {
 				},
 						]
 		  },
+		  selectedCard2: {
+			title: '',
+			image: 'https://assets.codepen.io/13471/sparkles.gif',
+			archetype: 'fire',
+			description: '',
+			energy: 0,
+			effects: [
+				{
+					type: '',
+					value: 0,
+					textValue: 'Choose a card to use'
+				},
+						]
+		  },
 	}
+	toPercentage = (val, maxVal) => {
+		// This function is for health of players, returns a string of the percent of health remaining.
+		let value = (val/maxVal)
+		return (String(Math.floor(value*100)))+'%'
+		}
 	
 	render () {
 		return (
@@ -42,12 +61,12 @@ class Battlefield extends React.Component {
 					</div>
 				</nav>
 			<div className="layout">
-					<Health player={this.state.player1}/>
+					<Health player={this.state.player1} toPercentage={this.toPercentage}/>
 					<div className="card-table">
 						<Card selectedCard={this.state.selectedCard}/>
 						<Card selectedCard={this.state.selectedCard}/>
 					</div>
-					<Health player={this.state.player2}/>
+					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
 			</div>
 			<footer className="hand-section">
 				{this.state.turn === 'player1' && this.state.player1.setDeck()}
