@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class NewGame extends React.Component {
 	state = {
 		username:'Player One',
@@ -26,7 +27,7 @@ class NewGame extends React.Component {
 
 
 	changeArchetype = (player, type) => {
-  
+
 
 		if (player == 'player1') {
 			this.setState({
