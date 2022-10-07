@@ -16,6 +16,7 @@ class Health extends React.Component {
 						<div className="hit" style={{width:this.state.health}}></div>
 					</div>
 				</div>
+				<div><h3>{this.props.player.health}</h3></div>
 			</div>
 
 		)
