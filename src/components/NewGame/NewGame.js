@@ -44,6 +44,7 @@ class NewGame extends React.Component {
 
 			        <div>
 			          <h2>{this.state.username2}</h2>
+								<div className="popUpCard"><CardPopUp /></div>
 			        </div>
 
 			        <div id="character-container" >
@@ -71,14 +72,15 @@ class NewGame extends React.Component {
 								</div>
 	            </div>
 
-							<div>
-								{this.state.player1Archetype && this.state.player2Archetype ?
-									<button className="startButton" onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
-										{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button> : null}
-							</div>
+
 
 						</div>
-						<div className="popUpCard"><CardPopUp /></div>
+						<div>
+							{this.state.player1Archetype && this.state.player2Archetype ?
+								<button className="startButton" onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
+									{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button> : null}
+						</div>
+
 					</div>
 				</>
 		)
