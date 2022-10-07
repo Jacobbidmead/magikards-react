@@ -76,10 +76,9 @@ class NewGame extends React.Component {
 
 								</div>
 						</div>
-						<div className="show-button">
 								<button className="startButton" style={{ visibility: this.state.player1Archetype && this.state.player2Archetype ? 'visible' : 'hidden' }}onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
 									{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button>
-						</div>
+						
 					</div>
 
 				</>
