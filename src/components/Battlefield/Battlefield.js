@@ -24,7 +24,7 @@ class Battlefield extends React.Component {
 						]
 		  },
 	}
-	
+
 	render () {
 		return (
 			<>
@@ -41,6 +41,11 @@ class Battlefield extends React.Component {
 						<a href="#" className="button" onClick={e => this.props.return()}>Quit Game</a>
 					</div>
 				</nav>
+				<div className="battleLog">
+				<ul>
+				<li>battle log</li>
+				</ul>
+				</div>
 			<div className="layout">
 					<Health player={this.state.player1}/>
 					<div className="card-table">
@@ -64,8 +69,8 @@ class Battlefield extends React.Component {
 							<HandCard card={card} key={idx}/>
 						)
 					})}
-				
-				
+
+
 			</footer>
 			</div>
 			</>
