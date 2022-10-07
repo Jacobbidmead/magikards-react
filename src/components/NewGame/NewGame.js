@@ -46,9 +46,10 @@ class NewGame extends React.Component {
 
 	render () {
 		return (
-			<form>
+          <>
 
 			      <div className="background playerLayout">
+
 			        <div><h2>{this.state.username}</h2></div>
 			        <div>
 			          <h2>{this.state.username2}</h2>
@@ -75,16 +76,20 @@ class NewGame extends React.Component {
 			          <div className="avatar"><img src="images/firedragon.png" onClick={() => this.changeArchetype('player2', 'fire')} /></div>
 			          <div className="avatar"><img src="images/icedragon.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 			        </div>
+
+
+
+
 								<div>
+         {this.state.player1Archetype && this.state.player2Archetype ?
+					  <button className="startButton" onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
+				 {name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button> : null}
+								</div>
 
-
-{this.state.player1Archetype && this.state.player2Archetype ?
-								<button className="startButton" onClick={e => this.props.initializePlayers({name: this.state.username, playerArchetype: this.state.player1Archetype},
-									{name: this.state.username2, playerArchetype: this.state.player2Archetype})}>Start</button> : null}
-									</div>
+						<div className="popUpCard"><CardPopUp /></div>
 			      </div>
 
-			    </form>
+					  </>
 		)
 	}
 }

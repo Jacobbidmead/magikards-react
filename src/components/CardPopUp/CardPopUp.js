@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from '../Card/Card.js'
-// import {cardsData} from '../cardsData'
+import {cardsData} from '../../cardsData'
 
 
-// let cards = cardsData
+let cards = cardsData
 
 
 class CardPopUp extends React.Component {
@@ -13,7 +13,7 @@ class CardPopUp extends React.Component {
 
 	showCards = (e) => {
 		this.setState({
-			showAllCards: true
+			showAllCards: this.state.showAllCards ? false : true
 		})
 	}
 
@@ -25,7 +25,7 @@ class CardPopUp extends React.Component {
 		return (
 <>
 
-{this.state.showAllCards ? <div><Card/></div> : null}
+{this.state.showAllCards ? <div><Card selectedCard={cards[0]}/></div> : null}
 	<div><button onClick={e => this.showCards(e)}>Show All Cards</button></div>
 
 </>
