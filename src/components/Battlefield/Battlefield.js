@@ -2,6 +2,9 @@ import React from 'react'
 import Card from '../Card/Card.js'
 import HandCard from '../HandCard/HandCard.js'
 import Health from '../Health/Health.js'
+const d = new Date().toLocaleTimeString('en-US', { hour12: false, 
+	hour: "numeric", 
+	minute: "numeric"})
 
 class Battlefield extends React.Component {
 	state = {
@@ -95,6 +98,7 @@ class Battlefield extends React.Component {
 		return (
 			<>
 			<div className="background">
+				
 				<nav className="layout">
 					<div>
 							<a href='#' className="button"> <img src="" />Username</a>
@@ -108,9 +112,10 @@ class Battlefield extends React.Component {
 					</div>
 				</nav>
 				<div className="battleLog">
-				<ul>
-				<li>battle log</li>
-				</ul>
+					<ul>
+						<li>battle log</li>
+						<li>How</li>
+					</ul>
 				</div>
 			<div className="layout">
 					<Health player={this.state.player1} toPercentage={this.toPercentage}/>
