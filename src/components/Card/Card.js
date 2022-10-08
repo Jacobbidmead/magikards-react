@@ -16,7 +16,6 @@ class Card extends React.Component {
 	swapTypeIcon = (type) => {
 		// type = effect type on card
 		let icon
-		console.log(type)
 		switch (type){
 			case 'damage':
 				icon = <i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i>

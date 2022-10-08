@@ -5,7 +5,6 @@ class HandCard extends React.Component {
   swapTypeIcon = (type) => {
 		// type = effect type on card
 		let icon
-		console.log(type)
 		switch (type){
 			case 'damage':
 				icon = <i className={`fa-sharp fa-solid fa-hand-fist fist-icon`}></i>
@@ -35,7 +34,7 @@ class HandCard extends React.Component {
 		return (
 			<div className="hand" onDoubleClick={e => this.props.submitCard(this.props.playerTurn, this.props.card, this.props.id, this.props.player)}>
           <div>
-            <img className="hand-img" src={this.props.card.image} />
+            <img className="hand-img" src={this.props.card.image}alt=''/>
           </div>
             <div className={`hand-body ${this.props.card.archetype}`}>
               <div>

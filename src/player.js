@@ -16,11 +16,11 @@ class Player {
       //this.level = obj.level|| 1  // current level of player
       this.health = obj.health || 500 // this is only modified in the battlefield. Resets to max once battle is over
       this.maxHealth = obj.maxHealth|| 500
-      this.strength = obj.strength || 1.0   // as you level, strength increases to add damage to a card. Must be 1.X no greater than 2
+      this.strength = obj.strength || 1.0  // as you level, strength increases to add damage to a card. Must be 1.X no greater than 2
       this.resistance = obj.resistance || 0  // everyone starts with 0% resist, but the more you have is a value less than or equal to 1.0
       // (Which would be 100% resistance)
-      this.energy = obj.energy || 0 // only changes during the game
-      this.maxEnergy = obj.maxEnergy|| 5
+      this.energy = obj.energy || 1 // only changes during the game
+      this.maxEnergy = obj.maxEnergy|| 6
       this.critBoost= obj.critBoost|| 1.5  // amount that is multiplied to the damage of a card (but before boosts are applied)
       this.critChance = obj.critChance|| 0  // percent chance that a critical occurs
       this.boosts = [] // only populated during battle to boost spell on top of your strength,
@@ -77,7 +77,9 @@ class Player {
       } else {
         return null
       }
-      
+    }
+    addEnergy = () => {
+      this.energy = this.energy === this.maxEnergy ? null : this.energy += 1
     }
     removeHealth(damagePoints) {
       // Removes health based off the incoming damage points.

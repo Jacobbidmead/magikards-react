@@ -168,8 +168,20 @@ h2 {
 
 }
 
+.player-boosts {
+  height: 25%;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.4)
 
-
+}
+.player-boosts-sub {
+  font-size: 14px;
+  text-align: center;
+}
+.player-boosts-sub-energy {
+  background-color: rgba(239, 239, 239, 0.4);
+  border-radius: 5px;
+}
 .playerLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;

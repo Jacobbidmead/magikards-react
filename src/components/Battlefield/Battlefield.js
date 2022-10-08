@@ -44,7 +44,7 @@ class Battlefield extends React.Component {
 	}
 	submitCard = (playerTurn, card, idx, player) =>{
 		// idx is the index of the card that was selected so we can remove it from hand of player
-		console.log(`Player energy: ${player.energy}`)
+		player.addEnergy()
 		if (player.energy < card.energy) {
 			console.log('You do not have enough energy to use this card')
 		} else {
@@ -127,8 +127,8 @@ class Battlefield extends React.Component {
 			<div className="layout">
 					<Health player={this.state.player1} toPercentage={this.toPercentage}/>
 					<div className="card-table">
-						<Card selectedCard={this.state.selectedCard}/>
-						<Card selectedCard={this.state.selectedCard2}/>
+						<Card selectedCard={this.state.selectedCard} turn={this.state.turn}/>
+						<Card selectedCard={this.state.selectedCard2} turn={this.state.turn}/>
 					</div>
 					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
 			</div>
