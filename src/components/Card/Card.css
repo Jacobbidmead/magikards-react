@@ -3,10 +3,13 @@
 }
 
 .card-body {
-  margin: 2px 0px 2px 0px;
+  margin: 5px 0px 0px 0px;
   border-radius: 10px;
   padding: 10px;
   color: white;
+  height: 53%;
+  display: grid;
+  grid-template-rows: 80% 20%;
 }
 
 .card-table {
@@ -22,11 +25,17 @@
   transform: scale(0.8) translateY(0px);
   transition: 1.5s;
   text-align: center;
+  height: 350px;
+  width: 290px;
+  margin-left: 8%;
 }
+
+
 
 .hand {
   border: solid white 1px;
-  height: 220px;
+  height: 100%;
+  width: 190px;
   padding: 5px;
   background-image: url("https://assets.codepen.io/13471/sparkles.gif");
   border-radius: 10px;
@@ -35,18 +44,22 @@
   text-align: center;
 }
 .hand-body {
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 5px 0px;
   border-radius: 10px;
   color: white;
-  height: 80px;
+  height: 130px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
+  font-size: 12px;
+  display: grid;
+  grid-template-rows: 80% 20%;
 }
 
 .hand-img {
   width: 100%;
-  max-height: 100px;
+  height: 100px;
   background-size: contain;
+  border-radius: 5px;
 }
 
 .card:hover {
@@ -59,7 +72,13 @@
 	background-size: cover;
 	background-position: center;
 }
+.card-title {
+  margin: 5px 0px;
+}
 
+.card-text {
+  font-size: 14px;
+}
 
 .hand:hover {
   transform: scale(0.8) translateY(-30px);

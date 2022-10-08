@@ -3,6 +3,10 @@
 
 }
 
+.battleLog {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,14 +18,28 @@ body {
   grid-template-columns: 25% 50% 25%;
 }
 
+
+.battleLog {
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+	color: white;
+	width: 75%;
+  border: solid 1px antiquewhite;
+	margin: 0px 0px 30px 0px;
+	text-align: center;
+	display: inline-block;
+	align-items: center;
+
+
+}
 /* .layout > div {
   border: 1px solid #ccc;
 } */
 
 .background {
   background-image: url('../public/images/background.png');
-  height: 100vh;
   background-size: cover;
+	text-align: center;
+  height: 100vh;
 }
 
 .health-bar {
@@ -55,12 +73,10 @@ body {
 }
 
 .hand-section {
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
 
 .button {
   padding: 5px 10px;
@@ -73,17 +89,37 @@ body {
 }
 
 nav {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+	padding-top: 20px;
+
 }
 
 .title {
   text-align: center;
 }
 
+
+.avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+	transition: 0.33s;
+}
+
+.avatar:hover {
+	cursor: pointer;
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	transition: 0.15s;
+}
+
+
 .avatar img {
-  height: 25%;
-  width: 25%;
-  margin-left: 80px;
+  height: 50px;
+  width: 50px;
+
 
 }
 
@@ -100,17 +136,6 @@ input[type=text] {
 
 }
 
-input[type=text]:focus {
-  border: none;
-}
-
-
-
-#character-container img:hover {
-  border-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 5px black;
-
-}
 
 h2 {
   color: rgb(255, 255, 255);
@@ -121,7 +146,6 @@ h2 {
 .character-box {
   width: 270px;
   height: 170px;
-  float: left;
   border-radius: 10px;
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.644);
@@ -130,6 +154,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
+	margin: 0 auto;
 
 }
 
@@ -139,14 +164,35 @@ h2 {
 	padding: 20px;
 	border-radius: 20px;
 	border-color: white;
-	float: right;
 	width: 200px;
+
 }
 
+.player-boosts {
+  height: 25%;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.4)
 
-
+}
+.player-boosts-sub {
+  font-size: 14px;
+  text-align: center;
+}
+.player-boosts-sub-energy {
+  background-color: rgba(239, 239, 239, 0.4);
+  border-radius: 5px;
+}
 .playerLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+}
+
+.popUpCard {
+	position: absolute;
+	top: 10px;
+	right: 10px	;
+}
+
+input {
+  text-align: center;
 }

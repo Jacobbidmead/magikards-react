@@ -12,9 +12,9 @@ export const cardsData = [
             textValue: '50'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35%'
         }
                 ]
   },
@@ -69,9 +69,9 @@ export const cardsData = [
     energy: 0,
     effects: [
         {
-            type: 'defend',
+            type: 'defense',
             value: 0.85,
-            textValue: '15%'
+            textValue: '-15% incoming'
         },
 
                 ]
@@ -83,9 +83,9 @@ export const cardsData = [
     energy: 1,
     effects: [
         {
-            type: 'defend',
+            type: 'defense',
             value: 0.75,
-            textValue: '25%'
+            textValue: '-25% incoming '
         },
 
                 ]
@@ -97,9 +97,9 @@ export const cardsData = [
     energy: 2,
     effects: [
         {
-            type: 'defend',
+            type: 'defense',
             value: 0.65,
-            textValue: '35%'
+            textValue: '-35% incoming'
         },
 
                 ]
@@ -112,14 +112,14 @@ export const cardsData = [
     energy: 3,
     effects: [
         {
-            type: 'defend',
+            type: 'defense',
             value: 0.50,
-            textValue: '50%'
+            textValue: '-50% incoming'
         },
 
                 ]
   },{
-    title: 'Basic boost',
+    title: 'Basic Boost',
     image: '/images/firemage.png',
     archetype: 'fire',
     description: 'Fire blocked with a shield',
@@ -131,14 +131,14 @@ export const cardsData = [
             textValue: '50'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
     {
-    title: 'Burn boost',
+    title: 'Burn Boost',
     image: '/images/firemage.png',
     archetype: 'fire',
     description: 'Fire gained strength!',
@@ -150,14 +150,14 @@ export const cardsData = [
             textValue: '50'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35% outgoing'
         }
                 ]
   },
         {
-    title: 'Attack boost',
+    title: 'Attack Boost',
     image: '/images/firemage.png',
     archetype: 'fire',
     description: 'Fire gained strength!',
@@ -169,9 +169,9 @@ export const cardsData = [
             textValue: '100'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
@@ -188,9 +188,9 @@ export const cardsData = [
             textValue: '250'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.25,
-          textValue: '25%'
+          textValue: '+25% outgoing'
         }
                 ]
   },
@@ -207,9 +207,9 @@ export const cardsData = [
             textValue: '80'
         },
         {
-          type: 'boost',
+          type: 'atkboost',
           value: 1.35,
-          textValue: '35%'
+          textValue: '+35% outgoing'
         }
                 ]
   },
@@ -256,16 +256,16 @@ export const cardsData = [
 	                ]
 	  },
 	{
-	    title: 'Basic Defence',
+	    title: 'Basic Defense',
 	    image: '/images/iceshield.png',
 	    archetype: 'ice',
 	    description: '',
 	    energy: 1,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.75,
-                textValue: '25%'
+                textValue: '-25% incoming '
 	        }
 	                ]
 	  },
@@ -277,9 +277,9 @@ export const cardsData = [
 	    energy: 2,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.65,
-                textValue: '35%'
+                textValue: '-35% incoming '
 	        }
 	                ]
 	  },
@@ -291,9 +291,9 @@ export const cardsData = [
 	    energy: 3,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.5,
-                textValue: '50%'
+                textValue: '-50% incoming'
 	        }
 	                ]
 	  },
@@ -305,47 +305,47 @@ export const cardsData = [
 	    energy: 3,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.3,
-                textValue: '70%'
+                textValue: '-70% incoming'
 	        }
 	                ]
 	  },
 	{
-	    title: 'Basic boost',
+	    title: 'Basic Boost',
 	    image: '/images/iceshield.png',
 	    archetype: 'ice',
 	    description: '',
 	    energy: 1,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.75,
-                textValue: '25%'
+                textValue: '-25% incoming'
 	        },
 	        {
-	          type: 'boost',
+	          type: 'atkboost',
 	          value: 1.25,
-              textValue: '25%'
+              textValue: '+25% outgoing'
 	        }
 	                ]
 	  },
 	{
-	    title: 'Frost boost',
+	    title: 'Frost Boost',
 	    image: '/images/iceshield.png',
 	    archetype: 'ice',
 	    description: '',
 	    energy: 1,
 	    effects: [
 	        {
-	            type: 'defend',
+	            type: 'defense',
 	            value: 0.65,
-                textValue: '35%'
+                textValue: '-35% incoming'
 	        },
 	        {
-	          type: 'boost',
+	          type: 'atkboost',
 	          value: 1.25,
-              textValue: '25%'
+              textValue: '+25% outgoing'
 	        }
 	                ]
 	  },
@@ -362,9 +362,9 @@ export const cardsData = [
                 textValue: '150'
 	        },
 	        {
-	          type: 'defend',
+	          type: 'defense',
 	          value: 0.85,
-              textValue: '15%'
+              textValue: '-15% incoming'
 	        }
 	                ]
 	  },
@@ -381,9 +381,9 @@ export const cardsData = [
                 textValue: '30'
 	        },
 	        {
-	          type: 'defend',
+	          type: 'defense',
 	          value: 0.75,
-              textValue: '25%'
+              textValue: '-25% incoming'
 	        }
 	                ]
 	  }
