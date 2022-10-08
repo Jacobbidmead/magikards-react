@@ -38,7 +38,9 @@ class HandCard extends React.Component {
             <img className="hand-img" src={this.props.card.image} />
           </div>
             <div className={`hand-body ${this.props.card.archetype}`}>
+              <div>
               {this.props.card.effects.map(effect => <div>{effect.textValue} {this.swapTypeIcon(effect.type)}</div>)}
+              </div>
               <div className="card-energy">
 						    {this.displayEnergy(this.props.card.energy).map(el => el)}
 						  </div>

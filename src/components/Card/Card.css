@@ -3,11 +3,13 @@
 }
 
 .card-body {
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   border-radius: 10px;
   padding: 10px;
   color: white;
-  height: 50%;
+  height: 53%;
+  display: grid;
+  grid-template-rows: 80% 20%;
 }
 
 .card-table {
@@ -47,8 +49,10 @@
   color: white;
   height: 130px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 12px;
+  display: grid;
+  grid-template-rows: 80% 20%;
 }
 
 .hand-img {
@@ -67,6 +71,9 @@
 .card-img-top{
 	background-size: cover;
 	background-position: center;
+}
+.card-title {
+  margin: 5px 0px;
 }
 
 .card-text {

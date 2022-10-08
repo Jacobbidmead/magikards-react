@@ -47,13 +47,14 @@ class Card extends React.Component {
 						style={{backgroundImage: "url(" +this.props.selectedCard.image+ ")"}}
 					></div>
 					<div className={`card-body ${this.props.selectedCard.archetype}`}>
+						<div>
 						<h3 className="card-title text-center">{this.props.selectedCard.title}</h3>
-
 						<h3 className="card-text text-center atributes">
 							{this.props.selectedCard.effects.length == 1 ? <><div>{this.props.selectedCard.effects[0].textValue}
 								{this.swapTypeIcon(this.props.selectedCard.effects[0].type)}</div><div style={{height: "100%"}}></div></>: 
 								this.props.selectedCard.effects.map((effect, i)=> <div>{effect.textValue} {this.swapTypeIcon(effect.type)}</div>)}
 						</h3>
+						</div> 
 						<div className="card-energy">
 						{this.displayEnergy(this.props.selectedCard.energy).map(el => el)}
 						</div>
