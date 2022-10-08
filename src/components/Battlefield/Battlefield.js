@@ -42,22 +42,26 @@ class Battlefield extends React.Component {
 						]
 		  },
 	}
-	submitCard = (player, card, idx) =>{
+	submitCard = (playerTurn, card, idx, player) =>{
 		// idx is the index of the card that was selected so we can remove it from hand of player
-		console.log('submit card')
-		if (player == 'player1'){
+		console.log(`Player energy: ${player.energy}`)
+		if (player.energy < card.energy) {
+			console.log('You do not have enough energy to use this card')
+		} else {
+		if (playerTurn == 'player1'){
 			this.state.player1.hand.splice(idx, 1)
 			this.setState({
 				selectedCard: card,
 				turn: 'player2'
 			})
-		} else if (player == 'player2'){
+		} else if (playerTurn == 'player2'){
 			this.state.player2.hand.splice(idx, 1)
 			this.setState({
 				selectedCard2: card
 			})
 			
 		}
+	}
 	}
 	resetCards = () => {
 		this.setState({
@@ -133,14 +137,14 @@ class Battlefield extends React.Component {
 				{this.state.turn === 'player1' && this.state.player1.getRandomCards()}
 				{this.state.turn === 'player1' && this.state.player1.hand.map((card, idx) => {
 						return (
-							<HandCard card={card} key={idx} submitCard={this.submitCard} player='player1'/>
+							<HandCard card={card} id={idx} submitCard={this.submitCard} playerTurn='player1' player={this.state.player1}/>
 						)
 					})}
 				{this.state.turn === 'player2' && this.state.player2.setDeck()}
 				{this.state.turn === 'player2' && this.state.player2.getRandomCards()}
 				{this.state.turn === 'player2' && this.state.player2.hand.map((card, idx) => {
 						return (
-							<HandCard card={card} key={idx} submitCard={this.submitCard} player='player2'/>
+							<HandCard card={card} id={idx} submitCard={this.submitCard} playerTurn='player2' player={this.state.player2}/>
 						)
 					})}
 
