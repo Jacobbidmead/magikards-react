@@ -48,14 +48,14 @@ class HandSection extends React.Component {
                     {(this.props.turn === 'player1' && this.state.displayCards == true) ? this.showCards('player1'):
                     (this.props.turn === 'player1' && this.state.displayCards === false) ? 
                     <div className='new-choice'>
-                        <div>Player One</div>
+                        <div>{this.props.player1.name}</div>
                         <div>Your turn!</div>
                         <div className='button' onClick={e => this.switch()}>Ready</div>
                     </div> : null}
                     {(this.props.turn === 'player2' && this.state.displayCards == true) ? this.showCards('player2'): 
                     (this.props.turn === 'player2' && this.state.displayCards == false) ?
                     <div className='new-choice'>
-                        <div>Player Two</div>
+                        <div>{this.props.player2.name}</div>
                         <div>Your turn!</div>
                         <div className='button' onClick={e => this.switch()}>Ready</div>
                     </div> : null}

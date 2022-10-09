@@ -44,7 +44,6 @@ class Battlefield extends React.Component {
 	}
 	submitCard = (playerTurn, card, idx, player) =>{
 		// idx is the index of the card that was selected so we can remove it from hand of player
-		player.addEnergy()
 		if (player.energy < card.energy) {
 			console.log('You do not have enough energy to use this card')
 		} else {
