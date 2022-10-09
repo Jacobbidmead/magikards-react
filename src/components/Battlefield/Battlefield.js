@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card.js'
-import HandCard from '../HandCard/HandCard.js'
+import HandSection from '../HandSection/HandSection.js'
 import Health from '../Health/Health.js'
 const d = new Date().toLocaleTimeString('en-US', { hour12: false, 
 	hour: "numeric", 
@@ -59,11 +59,11 @@ class Battlefield extends React.Component {
 			this.setState({
 				selectedCard2: card
 			})
-			
 		}
 	}
 	}
 	resetCards = () => {
+		// resets the two cards that appear in the middle of the screen
 		this.setState({
 			selectedCard: {
 				title: '',
@@ -132,24 +132,7 @@ class Battlefield extends React.Component {
 					</div>
 					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
 			</div>
-			<footer className="hand-section">
-				{this.state.turn === 'player1' && this.state.player1.setDeck()}
-				{this.state.turn === 'player1' && this.state.player1.getRandomCards()}
-				{this.state.turn === 'player1' && this.state.player1.hand.map((card, idx) => {
-						return (
-							<HandCard card={card} id={idx} submitCard={this.submitCard} playerTurn='player1' player={this.state.player1}/>
-						)
-					})}
-				{this.state.turn === 'player2' && this.state.player2.setDeck()}
-				{this.state.turn === 'player2' && this.state.player2.getRandomCards()}
-				{this.state.turn === 'player2' && this.state.player2.hand.map((card, idx) => {
-						return (
-							<HandCard card={card} id={idx} submitCard={this.submitCard} playerTurn='player2' player={this.state.player2}/>
-						)
-					})}
-
-
-			</footer>
+				<HandSection turn={this.state.turn} player1={this.state.player1} player2={this.state.player2} submitCard={this.submitCard}/>
 			</div>
 			
 		)

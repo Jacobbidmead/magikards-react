@@ -40,23 +40,27 @@ class Player {
         ]
     }
     setDeck(){
-      // if player is fire, cards are all fire. if player is ice, cards should all be ice.
-      let cards = this.playerArchetype === 'fire' ? cardsData.filter(card => card.archetype === 'fire') : cardsData.filter(card => card.archetype === 'ice')
-      // filter by energy (rank)
-      let rank_0 = {arr: cards.filter(card => card.energy === 0), max: 8}
-      let rank_1 = {arr: cards.filter(card => card.energy === 1), max: 8}
-      let rank_2 = {arr: cards.filter(card => card.energy === 2), max: 7}
-      let rank_3 = {arr: cards.filter(card => card.energy === 3), max: 5}
-      // Players deck becomes: rank 0 max 6 cards, rank 1 max 6 cards, rank 2 max 5 cards, rank 3 max 4 cards, rank 4 max 3)
-      // Select random cards from each rank obj's arr until they have the max
-      cards = [rank_0, rank_1, rank_2, rank_3]
-      cards.forEach(rank => {
-        for (let i = 0; i < rank.max; i++){
-          let randomCard = Math.floor(Math.random() * rank.arr.length)
-          this.deck.push(rank.arr[randomCard])
-        }
-      })
-      
+      if (this.deck.length > 1){
+        return null
+      } else {
+        // if player is fire, cards are all fire. if player is ice, cards should all be ice.
+        let cards = this.playerArchetype === 'fire' ? cardsData.filter(card => card.archetype === 'fire') : cardsData.filter(card => card.archetype === 'ice')
+        // filter by energy (rank)
+        let rank_0 = {arr: cards.filter(card => card.energy === 0), max: 8}
+        let rank_1 = {arr: cards.filter(card => card.energy === 1), max: 8}
+        let rank_2 = {arr: cards.filter(card => card.energy === 2), max: 7}
+        let rank_3 = {arr: cards.filter(card => card.energy === 3), max: 5}
+        // Players deck becomes: rank 0 max 6 cards, rank 1 max 6 cards, rank 2 max 5 cards, rank 3 max 4 cards, rank 4 max 3)
+        // Select random cards from each rank obj's arr until they have the max
+        let cardRanks = [rank_0, rank_1, rank_2, rank_3]
+        
+        cardRanks.forEach(rank => {
+          for (let i = 0; i < rank.max; i++){
+            let randomCard = Math.floor(Math.random() * rank.arr.length)
+            this.deck.push(rank.arr[randomCard])
+          }
+        })
+    }
     }
     getRandomCards() {
       // 'Deck is the selection of cards available to a player at a certain level'
@@ -71,12 +75,14 @@ class Player {
             let randomCard = this.availableCards[randomIndex]
             cardHand.push(randomCard)
             this.availableCards.splice(randomIndex, 1)
+            console.log(this.availableCards.length)
       }
       if (this.hand.length === 0){
         this.hand = cardHand
       } else {
         return null
       }
+    
     }
     addEnergy = () => {
       this.energy = this.energy === this.maxEnergy ? this.maxEnergy : this.energy += 1

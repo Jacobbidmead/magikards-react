@@ -42,7 +42,7 @@ class HandCard extends React.Component {
               </div>
               <div className="card-energy">
 						    {this.displayEnergy(this.props.card.energy).map(el => el)}
-						  </div>
+				</div>
             </div>
       </div>
 
