@@ -79,7 +79,7 @@ class Player {
       }
     }
     addEnergy = () => {
-      this.energy = this.energy === this.maxEnergy ? null : this.energy += 1
+      this.energy = this.energy === this.maxEnergy ? this.maxEnergy : this.energy += 1
     }
     removeHealth(damagePoints) {
       // Removes health based off the incoming damage points.
