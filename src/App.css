@@ -94,6 +94,20 @@ nav {
 
 }
 
+.new-choice {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%
+}
+.new-choice div {
+  margin-top: 5px;
+}
+.new-choice .button {
+  margin-bottom: 5px;
+}
+.new-choice .button:hover {
+  cursor: pointer;
+}
+
 .title {
   text-align: center;
 }
