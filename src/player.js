@@ -78,7 +78,7 @@ class Player {
             this.availableCards.splice(randomIndex, 1)
       }
       if (this.hand.length === 0){
-        this.hand = cardHand
+        this.hand = cardHand.map((el, idx) => el)
       } else {
         return null
       }

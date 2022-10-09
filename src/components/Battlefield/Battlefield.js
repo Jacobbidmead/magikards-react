@@ -57,7 +57,8 @@ class Battlefield extends React.Component {
 		} else if (playerTurn == 'player2'){
 			this.state.player2.hand.splice(idx, 1)
 			this.setState({
-				selectedCard2: card
+				selectedCard2: card,
+				turn: 'player1'
 			})
 		}
 	}

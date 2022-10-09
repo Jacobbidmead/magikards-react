@@ -23,7 +23,11 @@ class HandCard extends React.Component {
 		}
 		return icon
 	}
-  displayEnergy = (val) => {
+	switchAndSubmit = () => {
+		this.props.submitCard(this.props.playerTurn, this.props.card, this.props.key, this.props.player)
+		this.props.switch()
+	}
+	displayEnergy = (val) => {
 		let arr = []
 		for (let i = 0; i < val; i++){
 			arr.push(<i class="fa-regular fa-circle card-energy"></i>)
@@ -32,7 +36,7 @@ class HandCard extends React.Component {
 	}
 	render() {
 		return (
-			<div className={this.props.player.energy < this.props.card.energy ? "hand not-enough-energy": "hand"} onDoubleClick={e => this.props.submitCard(this.props.playerTurn, this.props.card, this.props.id, this.props.player)}>
+			<div className={this.props.player.energy < this.props.card.energy ? "hand not-enough-energy": "hand"} onDoubleClick={e => this.switchAndSubmit()}>
         		<div>
             		<img className="hand-img" src={this.props.card.image}alt=''/>
         		</div>
