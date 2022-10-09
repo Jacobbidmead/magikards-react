@@ -32,7 +32,7 @@ class HandCard extends React.Component {
 	}
 	render() {
 		return (
-			<div className="hand" onDoubleClick={e => this.props.submitCard(this.props.playerTurn, this.props.card, this.props.id, this.props.player)}>
+			<div className={this.props.player.energy < this.props.card.energy ? "hand not-enough-energy": "hand"} onDoubleClick={e => this.props.submitCard(this.props.playerTurn, this.props.card, this.props.id, this.props.player)}>
         		<div>
             		<img className="hand-img" src={this.props.card.image}alt=''/>
         		</div>

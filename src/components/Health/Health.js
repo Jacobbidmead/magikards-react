@@ -43,8 +43,8 @@ class Health extends React.Component {
 					<div className='player-boosts-sub-energy'>{this.displayEnergy(this.props.player.energy)} </div>
 					Status
 					{this.setBaseStrength(this.props.player.strength)}
-					<div className='player-boosts-sub'>{this.state.atkBoosts.length > 0 ? <i className={`fa-sharp fa-solid fa-hand-fist`}>{this.state.atkBoosts.map(el => <span>{el}</span>)}</i> : null}</div>
-					<div className='player-boosts-sub'>{this.state.defBoosts.length > 0 ? <i className="fa-solid fa-shield-halved">{this.state.defBoosts.map(el => <span>{el}</span>)}</i> : null}</div>
+					<div className='player-boosts-sub'>{this.state.atkBoosts.length > 0 ? <i className={`fa-sharp fa-solid fa-hand-fist`}>{this.state.atkBoosts.map((el, key) => <span>{el}</span>)}</i> : null}</div>
+					<div className='player-boosts-sub'>{this.state.defBoosts.length > 0 ? <i className="fa-solid fa-shield-halved">{this.state.defBoosts.map((el, key) => <span>{el}</span>)}</i> : null}</div>
 
 				</div>
 			</div>

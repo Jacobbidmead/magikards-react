@@ -60,6 +60,7 @@ class Player {
             this.deck.push(rank.arr[randomCard])
           }
         })
+        this.deck.forEach(card => this.availableCards.push(card))
     }
     }
     getRandomCards() {
@@ -67,7 +68,6 @@ class Player {
       // Deck will be retrieved from DB
       let cardHand = []
       //
-      this.deck.forEach(card => this.availableCards.push(card))
       let handLimit = 7
       //find random card from the deck and add it to hand
       for (let i = 0; i < handLimit; i++){
@@ -75,7 +75,6 @@ class Player {
             let randomCard = this.availableCards[randomIndex]
             cardHand.push(randomCard)
             this.availableCards.splice(randomIndex, 1)
-            console.log(this.availableCards.length)
       }
       if (this.hand.length === 0){
         this.hand = cardHand

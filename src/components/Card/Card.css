@@ -30,7 +30,9 @@
   margin-left: 8%;
 }
 
-
+.not-enough-energy {
+  opacity: 0.7;
+}
 
 .hand {
   border: solid white 1px;

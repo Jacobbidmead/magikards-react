@@ -51,11 +51,11 @@ class Card extends React.Component {
 						<h3 className="card-text text-center atributes">
 							{this.props.selectedCard.effects.length == 1 ? <><div>{this.props.selectedCard.effects[0].textValue}
 								{this.swapTypeIcon(this.props.selectedCard.effects[0].type)}</div><div style={{height: "100%"}}></div></>: 
-								this.props.selectedCard.effects.map((effect, i)=> <div>{effect.textValue} {this.swapTypeIcon(effect.type)}</div>)}
+								this.props.selectedCard.effects.map((effect, key)=> <div>{effect.textValue} {this.swapTypeIcon(effect.type)}</div>)}
 						</h3>
 						</div> 
 						<div className="card-energy">
-						{this.displayEnergy(this.props.selectedCard.energy).map(el => el)}
+						{this.displayEnergy(this.props.selectedCard.energy).map((el, key) => el)}
 						</div>
 					</div>
 				</div>
