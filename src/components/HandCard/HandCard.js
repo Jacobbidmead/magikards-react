@@ -41,7 +41,7 @@ class HandCard extends React.Component {
               			{this.props.card.effects.map(effect => <div>{effect.textValue} {this.swapTypeIcon(effect.type)}</div>)}
               		</div>
               		<div className="card-energy">
-						{this.displayEnergy(this.props.card.energy).map(el => el)}
+						{this.displayEnergy(this.props.card.energy).map((el, key) => el)}
 					</div>
             	</div>
       		</div>

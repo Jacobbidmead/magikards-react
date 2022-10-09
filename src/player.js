@@ -26,6 +26,7 @@ class Player {
       this.boosts = [] // only populated during battle to boost spell on top of your strength,
       // boost is a float number and is converted to a percentage (1.35 is 35%, for example, to be multiplied to damage)
       //this.status = 'offline' // 3 different values only: offline, online, busy
+      this.setDeck()
       this.xpThreshold = [
         100,// Lvl 1
         300,// 2
