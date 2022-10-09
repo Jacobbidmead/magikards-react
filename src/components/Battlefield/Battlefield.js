@@ -108,7 +108,7 @@ class Battlefield extends React.Component {
 				
 				<nav className="layout">
 					<div>
-							<a href='#' className="button">Username</a>
+							<a href='#' className="button">Game Help</a>
 					</div>
 					<div>
 						<div className="title">MagiKards</div>
