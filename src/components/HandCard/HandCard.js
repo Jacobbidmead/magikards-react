@@ -26,6 +26,7 @@ class HandCard extends React.Component {
 	switchAndSubmit = () => {
 		this.props.submitCard(this.props.playerTurn, this.props.card, this.props.key, this.props.player)
 		this.props.switch()
+		this.props.displayResults()
 	}
 	displayEnergy = (val) => {
 		let arr = []

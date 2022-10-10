@@ -89,10 +89,10 @@ class Player {
     }
     removeHealth(damagePoints) {
       // Removes health based off the incoming damage points.
-      window.alert(`Initial damage: ${damagePoints}`)
+      console.log(`Initial damage: ${damagePoints}`)
       if (this.resistance){
         damagePoints *= this.resistance
-        window.alert(`${this.name}'s resistance reduced the damage to ${damagePoints}`)
+        console.log(`${this.name}'s resistance reduced the damage to ${damagePoints}`)
         this.health -= damagePoints
       } else {
         this.health -= damagePoints
@@ -108,23 +108,34 @@ class Player {
         window.alert(`Health added: ${this.name}'s health is now: ${this.health}`)
       }
     }
-    addBoost(type, val){
+    addBoost(effect){
       // adds object to boosts array that contains the boost type and percentage/val increase(or decrease)
       // val MUST be a float beginning with 1.XX (xx being the % increase)
-      this.boosts.push({type, val})
+      let returnMessages = []
+      this.boosts.push(effect)
+      return returnMessages
     }
     increaseDamage(val){
-      let add = 0 // amt added to the dmg in the end
+      let returnMessages = []
+      // amt added to the dmg in the end
       // takes into account all boosts and strength before attacking the enemy
       val *= this.strength
-      window.alert(`${this.name}'s base strength increased damage output to ${val}`)
-      this.boosts.forEach(boost => {
-        if (boost.type =='damage') {
-          add *= boost.val
-          window.alert(`+${boost.val}%`)
-        }
-      })
-      return (val+add)
+      val = Math.floor(val)
+      if (this.strength > 1.0){
+        returnMessages.push(`${this.name}'s base strength increased damage output to ${val}`)
+      }
+      if (this.boosts.length > 0){
+        returnMessages.push('Adding boosts...')
+        this.boosts.forEach((boost, idx) => {
+          if (boost.type =='damage') {
+            val *= boost.val
+            boost.splice(idx, 1)
+            returnMessages.push(`${boost.textValue}`)
+          }
+        })
+      }
+      returnMessages.push(val)
+      return (returnMessages)
     }
     xpHandler(val){
         // val = xp being added
