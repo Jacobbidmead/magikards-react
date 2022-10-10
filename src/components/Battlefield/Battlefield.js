@@ -9,6 +9,7 @@ class Battlefield extends React.Component {
 		player1: this.props.player1,
 		player2: this.props.player2,
 		turn: 'player1', /*Player One goes first by default, this is changed once player selects a card*/
+		round: 1,
 
 		selectedCard: {
 			title: '',
@@ -54,8 +55,10 @@ class Battlefield extends React.Component {
 			this.state.player2.hand.splice(idx, 1)
 			this.setState({
 				selectedCard2: card,
-				turn: 'player1'
+				turn: 'player1',
+				round: this.state.round + 1
 			})
+			console.log(this.state.round)
 		}
 	}
 	}
