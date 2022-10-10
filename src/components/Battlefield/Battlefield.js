@@ -42,24 +42,39 @@ class Battlefield extends React.Component {
 	}
 	submitCard = (playerTurn, card, idx, player) =>{
 		// idx is the index of the card that was selected so we can remove it from hand of player
+		if (playerTurn == 'new-round'){
+			this.setState({
+				round: this.state.round + 1,
+				turn: 'player1'
+			})
+			this.state.player1.energy ++
+			this.state.player2.energy ++
+		} else
 		if (player.energy < card.energy) {
 			console.log('You do not have enough energy to use this card')
 		} else {
-		if (playerTurn == 'player1'){
-			this.state.player1.hand.splice(idx, 1)
-			this.setState({
-				selectedCard: card,
-				turn: 'player2'
-			})
-		} else if (playerTurn == 'player2'){
-			this.state.player2.hand.splice(idx, 1)
-			this.setState({
-				selectedCard2: card,
-				turn: 'player1',
-				round: this.state.round + 1
-			})
-			console.log(this.state.round)
-		}
+			if (playerTurn == 'player1'){
+				this.state.player1.hand.splice(idx, 1)
+				player.energy -= card.energy
+				if (player.energy < 1){
+					player.energy++
+				}
+				this.setState({
+					selectedCard: card,
+					turn: 'player2'
+				})
+				player.energy -= card.energy
+			} else if (playerTurn == 'player2'){
+				this.state.player2.hand.splice(idx, 1)
+				player.energy -= card.energy
+				if (player.energy < 1){
+					player.energy++
+				}
+				this.setState({
+					selectedCard2: card,
+					turn: 'new-round',
+				})
+			}
 	}
 	}
 	resetCards = () => {
@@ -132,7 +147,7 @@ class Battlefield extends React.Component {
 					</div>
 					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
 			</div>
-				<HandSection turn={this.state.turn} player1={this.state.player1} player2={this.state.player2} submitCard={this.submitCard}/>
+				<HandSection turn={this.state.turn} player1={this.state.player1} player2={this.state.player2} submitCard={this.submitCard} selectedCard={this.state.selectedCard} selectedCard2={this.state.selectedCard2}/>
 			</div>
 			
 		)
