@@ -1,7 +1,4 @@
 import React from 'react'
-import Card from './components/Card/Card.js'
-import HandCard from './components/HandCard/HandCard.js'
-import Health from './components/Health/Health.js'
 import {cardsData} from './cardsData'
 import Player from './player'
 import NewGame from './components/NewGame/NewGame.js'
