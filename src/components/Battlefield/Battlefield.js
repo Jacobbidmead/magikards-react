@@ -133,13 +133,7 @@ class Battlefield extends React.Component {
 						<a href="#" className="button quit" onClick={e => this.props.return()}>Quit Game</a>
 					</div>
 				</nav>
-				<div className="battleLog">
-					<ul>
-						<li>battle log</li>
-						<li>How</li>
-					</ul>
-				</div>
-			<div className="layout">
+			<div className="layout" id='below-nav'>
 					<Health player={this.state.player1} toPercentage={this.toPercentage}/>
 					<div className="card-table">
 						<Card selectedCard={this.state.selectedCard} turn={this.state.turn}/>

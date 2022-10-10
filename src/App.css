@@ -18,6 +18,10 @@ body {
   grid-template-columns: 25% 50% 25%;
 }
 
+#below-nav{
+  margin-top: 7%;
+}
+
 
 .battleLog {
   background-color: rgba(0, 0, 0, 0.4);
