@@ -43,6 +43,13 @@ body {
   height: 100vh;
 }
 
+.firstbackground {
+	background-image: url('../public/images/background2.png');
+	background-size: cover;
+	text-align: center;
+  height: 100vh;
+}
+
 .health-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

@@ -103,7 +103,7 @@ export const cardsData = [
     ]
   },
   {
-    title: "Cloak",
+    title: "Fire Cloak",
     image: "/images/firecloak.png",
     archetype: "fire",
     description: "Fire evaded the attack",
@@ -136,7 +136,7 @@ export const cardsData = [
     ]
   },
   {
-    title: "Burn Boost",
+    title: "Earth Burn",
     image: "/images/burnboost.png",
     archetype: "fire",
     description: "Fire gained strength!",
