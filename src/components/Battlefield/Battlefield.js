@@ -2,9 +2,6 @@ import React from 'react'
 import Card from '../Card/Card.js'
 import HandSection from '../HandSection/HandSection.js'
 import Health from '../Health/Health.js'
-const d = new Date().toLocaleTimeString('en-US', { hour12: false, 
-	hour: "numeric", 
-	minute: "numeric"})
 
 class Battlefield extends React.Component {
 	state = {
