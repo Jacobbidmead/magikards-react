@@ -19,12 +19,17 @@ class HandSection extends React.Component {
             })
         }
     }
+    resetMessages = () => {
+        this.setState({
+            messages: undefined
+        })
+    }
 
     displayResults = () => {
         // this function displays the results of each card while taking/restoring health of each player if applicable.
         // first, display the results of player 1's card (use the methods of player to display)
-        console.log('displaying results')
-        let newMessages = this.state.messages
+        this.resetMessages()
+        let newMessages = []
         newMessages.push(`${this.props.player1.name} used ${this.props.selectedCard.title}`)
         this.props.selectedCard.effects.forEach(effect => {
             // 3 different types are damage, atkboost, and defense
@@ -43,7 +48,6 @@ class HandSection extends React.Component {
         })
     }
     showCards = (player) => {
-
         if (player === 'player1'){
             if (this.props.player1.hand.length < 1){
                 this.props.player1.getRandomCards()
