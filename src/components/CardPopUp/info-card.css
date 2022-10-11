@@ -28,9 +28,18 @@
   padding-top: 5px;
 	text-align: center;
 	background-color: black;
+}
 
+.choose {
+	text-decoration: underline;
 }
 
 .text-font {
 	font-family: Times;
+	line-height: 25px;
+
+}
+
+.head {
+	color: #8A2BE2;
 }

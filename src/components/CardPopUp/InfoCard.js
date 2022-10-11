@@ -8,11 +8,11 @@ render() {
 	return (
 		<div className="info-card">
       <div className="info-card-body">
-        <h1 className="info-card-title text">
+        <h1 className="info-card-title text head">
           Welcome to MagiKards! The battling fantasy card game
         </h1>
 
-        <h3 className="text">Choose from Fire and Ice, and defeat youre enemy</h3>
+        <h3 className="text choose">Choose from Fire and Ice, and defeat youre enemy</h3>
 
         <div className="text text-font">
           Receive seven random cards in your hand and choose the correctly to
@@ -39,7 +39,7 @@ render() {
               sometimes both
             </li>
           </ul>
-          <h3 className="text">
+          <h3 className="text head">
             This is a battle to the death, first player to take 100% of their
             opponuts health wins!
           </h3>
