@@ -128,12 +128,12 @@ class Battlefield extends React.Component {
 					</div>
 				</nav>
 			<div className="layout" id='below-nav'>
-					<Health player={this.state.player1} toPercentage={this.toPercentage}/>
+					<Health player={this.props.player1} toPercentage={this.toPercentage}/>
 					<div className="card-table">
 						<Card selectedCard={this.state.selectedCard} turn={this.state.turn}/>
 						<Card selectedCard={this.state.selectedCard2} turn={this.state.turn}/>
 					</div>
-					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
+					<Health player={this.props.player2} toPercentage={this.toPercentage}/>
 			</div>
 				<HandSection round={this.state.round} turn={this.state.turn} player1={this.props.player1} player2={this.props.player2} submitCard={this.submitCard} selectedCard={this.state.selectedCard} selectedCard2={this.state.selectedCard2}/>
 			</div>

@@ -41,6 +41,7 @@ class HandSection extends React.Component {
             } else if (effect.type === 'atkboost'){
                 this.props.player1.addBoost(effect)
                 newMessages.push('Adding attack boost')
+                console.log(this.props.player1.boosts)
             }
         })
         this.setState({
@@ -73,6 +74,10 @@ class HandSection extends React.Component {
 		this.props.submitCard('new-round')
 		this.switch()
 	}
+
+    playerPass = () => {
+        console.log('Player Passed')
+    }
     render(){
         return(
             <>

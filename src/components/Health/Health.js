@@ -16,19 +16,19 @@ class Health extends React.Component {
 		}
 		return arr
 	}
-	setBaseStrength = (val) => {
+	setAtkBoosts = (arr) => {
 		// val will be the player's base strength as a mixed number, which is a value greater than or equal to 1.00.
 		// this changes the state so the player's base strength always displays
-		let final
-		if (val === 1){
-			return null
-		} else {
-			final = (' '+Math.floor((val-1)*100)+'%')
-		}
-		this.state.atkBoosts.push(final)
+		arr.forEach(val => {
+			this.state.atkBoosts.push(' '+Math.floor((val.value-1)*100)+'%')
+		})
+	}
+	setDefBoosts = (arr) => {
+		return null
+
 	}
 	componentDidMount(){
-		this.setBaseStrength(this.props.player.strength)
+		console.log(this.props.player.boosts)
 	}
 	render() {
 
