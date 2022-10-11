@@ -67,9 +67,9 @@ class NewGame extends React.Component {
 								 	<div>
 										<div className="character-box right-side" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' :
 							  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
-									<div className="avatar"><img src="images/fire.png" onClick={() => this.changeArchetype('player2', 'fire')} />
+									<div className="avatar"><img src="images/fireshield.png" onClick={() => this.changeArchetype('player2', 'fire')} />
 									</div>
-				          <div className="avatar"><img src="images/ice.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
+				          <div className="avatar"><img src="images/iceshield.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 									</div>
 
 

@@ -12,20 +12,20 @@ render() {
           Welcome to MagiKards! The battling fantasy card game
         </h1>
 
-        <h3 className="text choose">Choose from Fire and Ice, and defeat youre enemy</h3>
+        <h3 className="text choose">Choose from Fire and Ice, and defeat you're enemy</h3>
 
         <div className="text text-font">
-          Receive seven random cards in your hand and choose the correctly to
+          Receive seven random cards in your hand and choose correctly to
           deal the most damage, or recieve the least damage possible.
         </div>
         <div className="text text-font">
-          Once youve used up all the cards in youre hand, you will be dealt a
-          fresh hand.
+          Once youve used up all the cards in you're hand, you will be dealt a
+          fresh hand of seven cards.
         </div>
         <div className="text text-font">
           But beware! energy points with a cost of between one and three are
-          needed to play a card - if you use up all youre energy early you may
-          not be able to play and you'll miss a round, giving youre enemy the
+          needed to play a card - if you use up all you're energy early you may
+          not be able to play and you'll miss a round! giving youre enemy the
           advantage.
         </div>
         <div className="text">
@@ -36,7 +36,7 @@ render() {
             <li className="text-font">There are three card types, damage, defence and boost</li>
             <li className="text-font">
               Boost cards add an extra percentage to damage or defence, or
-              sometimes both
+              sometimes both!
             </li>
           </ul>
           <h3 className="text head">
