@@ -224,7 +224,3 @@ h2 {
 input {
   text-align: center;
 }
-
-.right-side {
-  transform: scaleX(-1);
-}

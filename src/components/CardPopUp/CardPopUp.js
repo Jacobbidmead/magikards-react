@@ -22,7 +22,7 @@ class CardPopUp extends React.Component {
 <>
 
 {this.state.showAllCards ? <div><InfoCard /></div> : null}
-	<div><button onClick={e => this.showCards(e)}>Show All Cards</button></div>
+	<div><button onClick={e => this.showCards(e)}>Info</button></div>
 
 </>
 		)
