@@ -1,0 +1,29 @@
+.info-card-body {
+  margin: 2px 0px 2px 0px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.info-card {
+  border: solid black 1px;
+  padding: 5px;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  border-radius: 10px;
+  text-align: center;
+	z-index: 4;
+}
+
+.info-card-title {
+  font-weight: bold;
+}
+
+.info-card-list {
+  padding: 0;
+	text-align: center;
+}
+
+.text {
+  padding-top: 5px;
+	text-align: center;
+}
