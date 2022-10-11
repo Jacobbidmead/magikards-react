@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card.js'
+import InfoCard from './InfoCard.js'
 import {cardsData} from '../../cardsData'
 import './info-card.css'
 
@@ -21,7 +21,7 @@ class CardPopUp extends React.Component {
 		return (
 <>
 
-{this.state.showAllCards ? <div><Card selectedCard={cards[0]}/></div> : null}
+{this.state.showAllCards ? <div><InfoCard /></div> : null}
 	<div><button onClick={e => this.showCards(e)}>Show All Cards</button></div>
 
 </>
