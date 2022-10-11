@@ -63,7 +63,6 @@ class NewGame extends React.Component {
 									<div>
 				            <input type="text" placeholder="Username" onKeyUp={e => this.changeUsername2(e)} maxLength={"20"}/>
 				          </div>
-
 								 	<div>
 										<div className="character-box right-side" style={{ backgroundImage: this.state.player2Archetype == 'fire' ? 'url(images/firedragon.png)' :
 							  this.state.player2Archetype == 'ice' ? 'url(images/icedragon.png)' : 'url(https://assets.codepen.io/13471/sparkles.gif)'}}></div>
@@ -71,9 +70,6 @@ class NewGame extends React.Component {
 									</div>
 				          <div className="avatar"><img src="images/ice.png" onClick={() => this.changeArchetype('player2', 'ice')}/></div>
 									</div>
-
-
-
 								</div>
 						</div>
 								<button className="startButton" style={{ visibility: this.state.player1Archetype && this.state.player2Archetype ? 'visible' : 'hidden' }}onClick={e =>  this.props.initializePlayers({name: this.state.username,  playerArchetype: this.state.player1Archetype},
