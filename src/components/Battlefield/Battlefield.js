@@ -45,25 +45,23 @@ class Battlefield extends React.Component {
 		if (playerTurn == 'new-round'){
 			this.setState({
 				round: this.state.round + 1,
-				turn: 'player1'
+				turn: 'player1',
+				
 			})
-			this.state.player1.energy ++
-			this.state.player2.energy ++
-		} else
-		if (player.energy < card.energy) {
+			this.props.player1.energy ++
+			this.props.player2.energy ++
+			
+		} else if (player.energy < card.energy) {
 			console.log('You do not have enough energy to use this card')
 		} else {
 			if (playerTurn == 'player1'){
-				this.state.player1.hand.splice(idx, 1)
-				player.energy -= card.energy
-				if (player.energy < 1){
-					player.energy++
-				}
+				this.props.player1.hand.splice(idx, 1)
+				this.props.player1.energy -= card.energy
 				this.setState({
 					selectedCard: card,
 					turn: 'player2'
 				})
-				player.energy -= card.energy
+				this.props.player1.energy -= card.energy
 			} else if (playerTurn == 'player2'){
 				this.state.player2.hand.splice(idx, 1)
 				player.energy -= card.energy
