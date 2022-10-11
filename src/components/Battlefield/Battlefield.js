@@ -48,8 +48,8 @@ class Battlefield extends React.Component {
 				turn: 'player1',
 				
 			})
-			this.props.player1.energy ++
-			this.props.player2.energy ++
+			this.props.player1.addEnergy()
+			this.props.player2.addEnergy()
 			this.resetCards()
 		} else if (player.energy < card.energy) {
 			console.log('You do not have enough energy to use this card')
@@ -135,7 +135,7 @@ class Battlefield extends React.Component {
 					</div>
 					<Health player={this.state.player2} toPercentage={this.toPercentage}/>
 			</div>
-				<HandSection turn={this.state.turn} player1={this.state.player1} player2={this.state.player2} submitCard={this.submitCard} selectedCard={this.state.selectedCard} selectedCard2={this.state.selectedCard2}/>
+				<HandSection round={this.state.round} turn={this.state.turn} player1={this.props.player1} player2={this.props.player2} submitCard={this.submitCard} selectedCard={this.state.selectedCard} selectedCard2={this.state.selectedCard2}/>
 			</div>
 			
 		)

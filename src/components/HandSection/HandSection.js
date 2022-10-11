@@ -78,6 +78,7 @@ class HandSection extends React.Component {
             <>
                 {this.state.displayCards == true && 
                     <div className='options-for-hand new-choice'>
+                        <div>Round {this.props.round}</div>
                         <div className='button'>Pass</div>
                     </div>}
                 <footer className="hand-section">
