@@ -76,6 +76,10 @@ class HandSection extends React.Component {
     render(){
         return(
             <>
+                {this.state.displayCards == true && 
+                    <div className='options-for-hand new-choice'>
+                        <div className='button'>Pass</div>
+                    </div>}
                 <footer className="hand-section">
                     {(this.props.turn === 'player1' && this.state.displayCards == true) ? this.showCards('player1'):
                     (this.props.turn === 'player1' && this.state.displayCards === false) ? 
