@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+
+# This project is a work in progress. It currently runs, but not as expected. New features will be added over time while also squashing bugs along the way.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
