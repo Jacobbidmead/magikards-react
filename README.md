@@ -5,6 +5,9 @@
 ## This project currently only runs on local machines. A future update will include the ability to connect with other players online. For now, the game runs with both players playing from the same machine. 
 
 In the terminal, navigate to the project file after downloading and type:
+### `npm i`
+
+This will install the necessary dependencies. After all files have downloaded, run the game by typing 
 
 ### `npm start`
 
