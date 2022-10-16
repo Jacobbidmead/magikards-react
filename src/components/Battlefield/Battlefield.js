@@ -8,7 +8,6 @@ class Battlefield extends React.Component {
 		hand: this.props.hand,
 		turn: 'player1', /*Player One goes first by default, this is changed once player selects a card*/
 		round: 1,
-
 		selectedCard: {
 			title: '',
 			image: 'https://assets.codepen.io/13471/sparkles.gif',
